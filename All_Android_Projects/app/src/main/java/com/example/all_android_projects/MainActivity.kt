@@ -5,21 +5,24 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.widget.AppCompatButton
 import com.example.all_android_projects.calculator.CalculatorActivity
+import com.example.all_android_projects.tictactoy.TicTacToyRegisterPage
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var buttoncalculator: AppCompatButton
+    private lateinit var buttontictactoy: AppCompatButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         buttoncalculator = findViewById(R.id.Calculator)
+        buttontictactoy = findViewById(R.id.TicTacToy)
 
         buttonClick()
 
     }
-
 
     fun buttonClick() {
 
@@ -29,5 +32,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
+
+        buttontictactoy.setOnClickListener(){
+            val intent = Intent(this,TicTacToyRegisterPage::class.java)
+            startActivity(intent)
+        }
     }
+
 }

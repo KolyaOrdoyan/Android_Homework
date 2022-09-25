@@ -12,14 +12,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.All_Android_Projects"
         tools:targetApi="31">
-
+        <activity
+            android:name=".tictactoy.TicTacToyRegisterPage"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".tictactoy.TicTacToy"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".calculator.CalculatorActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
