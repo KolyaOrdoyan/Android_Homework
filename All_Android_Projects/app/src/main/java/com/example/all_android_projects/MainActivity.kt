@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun buttonClick() {
+   private fun buttonClick() {
 
         buttoncalculator.setOnClickListener() {
 
