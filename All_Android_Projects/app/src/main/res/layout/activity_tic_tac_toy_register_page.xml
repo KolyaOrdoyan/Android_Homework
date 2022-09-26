@@ -21,7 +21,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="64dp"
@@ -33,7 +32,7 @@
 
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/player1"
         android:layout_width="347dp"
         android:layout_height="49dp"
         android:layout_marginTop="8dp"
@@ -51,13 +50,13 @@
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:src="@android:drawable/ic_notification_overlay"
-        app:layout_constraintEnd_toStartOf="@+id/editText2"
+        app:layout_constraintEnd_toStartOf="@+id/player2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/player2"
         android:layout_width="347dp"
         android:layout_height="49dp"
         android:layout_marginTop="8dp"

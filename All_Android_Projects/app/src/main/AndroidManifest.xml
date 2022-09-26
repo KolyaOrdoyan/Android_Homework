@@ -19,13 +19,11 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <activity
             android:name=".tictactoy.TicTacToy"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+            android:exported="false" />
+
         <activity
             android:name=".calculator.CalculatorActivity"
             android:exported="false" />

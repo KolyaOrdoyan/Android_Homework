@@ -17,17 +17,17 @@ class TicTacToyRegisterPage : AppCompatActivity() {
 
         startgamebutton = findViewById(R.id.game)
 
-        buttonClick()
+        click()
     }
 
 
-    fun buttonClick() {
+    fun click() {
 
         startgamebutton.setOnClickListener() {
 
             val intent = Intent(this, TicTacToy::class.java)
             startActivity(intent)
-
         }
     }
+
 }
