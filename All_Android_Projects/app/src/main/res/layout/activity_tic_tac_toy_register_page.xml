@@ -26,7 +26,7 @@
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginTop="84dp"
-        android:src="@android:drawable/ic_delete"
+        android:src="@drawable/tictactoe_x"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -49,7 +49,7 @@
         android:id="@+id/imageView1"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:src="@android:drawable/ic_notification_overlay"
+        android:src="@drawable/tictactoy_o"
         app:layout_constraintEnd_toStartOf="@+id/player2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />

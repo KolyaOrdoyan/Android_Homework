@@ -14,7 +14,7 @@
         android:layout_height="105dp"
         android:textAlignment="center"
         android:background="@drawable/tictactoy_buttons"
-        android:src="@android:drawable/ic_notification_overlay"
+        android:src="@drawable/tictactoy_o"
         app:layout_constraintBottom_toBottomOf="@+id/buttonX"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonX"
@@ -27,7 +27,7 @@
         android:layout_marginTop="56dp"
         android:layout_marginEnd="101dp"
         android:background="@drawable/tictactoy_buttons"
-        android:src="@android:drawable/ic_delete"
+        android:src="@drawable/tictactoe_x"
         app:layout_constraintEnd_toStartOf="@+id/buttonO"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -43,18 +43,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonO" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <ImageView
         android:id="@+id/appCompatButton1"
         android:layout_width="93dp"
         android:layout_height="60dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="64dp"
+        android:textSize="32sp"
         android:background="@drawable/tictactoy_buttons"
         app:layout_constraintEnd_toStartOf="@+id/appCompatButton2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scorePanelPlayer2" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <ImageView
         android:id="@+id/appCompatButton2"
         android:layout_width="93dp"
         android:layout_height="60dp"
@@ -64,7 +65,7 @@
         app:layout_constraintStart_toEndOf="@+id/appCompatButton1"
         app:layout_constraintTop_toTopOf="@+id/appCompatButton1" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <ImageView
         android:id="@+id/appCompatButton3"
         android:layout_width="93dp"
         android:layout_height="60dp"
@@ -74,7 +75,7 @@
         app:layout_constraintTop_toTopOf="@+id/appCompatButton1" />
 
 
-    <androidx.appcompat.widget.AppCompatButton
+    <ImageView
         android:id="@+id/appCompatButton4"
         android:layout_width="93dp"
         android:layout_height="60dp"
@@ -85,7 +86,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appCompatButton1" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <ImageView
         android:id="@+id/appCompatButton5"
         android:layout_width="93dp"
         android:layout_height="60dp"
@@ -94,7 +95,7 @@
         app:layout_constraintEnd_toStartOf="@+id/appCompatButton6"
         app:layout_constraintTop_toTopOf="@+id/appCompatButton4" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <ImageView
         android:id="@+id/appCompatButton6"
         android:layout_width="93dp"
         android:layout_height="60dp"
@@ -104,7 +105,7 @@
         app:layout_constraintTop_toTopOf="@+id/appCompatButton5" />
 
 
-    <androidx.appcompat.widget.AppCompatButton
+    <ImageView
         android:id="@+id/appCompatButton7"
         android:layout_width="93dp"
         android:layout_height="60dp"
@@ -115,7 +116,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appCompatButton4" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <ImageView
         android:id="@+id/appCompatButton8"
         android:layout_width="93dp"
         android:layout_height="60dp"
@@ -124,7 +125,7 @@
         app:layout_constraintTop_toTopOf="@+id/appCompatButton7"
         app:layout_constraintStart_toEndOf="@id/appCompatButton7"/>
 
-    <androidx.appcompat.widget.AppCompatButton
+    <ImageView
         android:id="@+id/appCompatButton9"
         android:layout_width="93dp"
         android:layout_height="60dp"
