@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1b1d50"
+    tools:context=".TicTacToe">
+
+    <ImageButton
+        android:id="@+id/buttonO"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        android:textAlignment="center"
+        android:background="@drawable/tictactoe_buttons"
+        android:src="@drawable/tictactoy_o"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonX"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonX"
+        app:layout_constraintTop_toTopOf="@+id/buttonX" />
+
+    <ImageButton
+        android:id="@+id/buttonX"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="101dp"
+        android:background="@drawable/tictactoe_buttons"
+        android:src="@drawable/tictactoe_x"
+        app:layout_constraintEnd_toStartOf="@+id/buttonO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/player1Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="164dp"
+        android:gravity="center"
+        android:text="Player 1 score - "
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ScorePlayer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/player1Name"
+        app:layout_constraintTop_toTopOf="@+id/player1Name" />
+
+
+    <TextView
+        android:id="@+id/player2Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Player 1 score - "
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player1Name" />
+
+    <TextView
+        android:id="@+id/ScorePlayer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/player2Name"
+        app:layout_constraintTop_toTopOf="@+id/player2Name" />
+
+
+    <TextView
+        android:id="@+id/scorePanelPlayer2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:gravity="center"
+        android:text="Player 1 turn"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonO" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton1"
+        android:layout_width="93dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/tictactoe_buttons"
+        android:tag="0"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toStartOf="@+id/appCompatButton2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scorePanelPlayer2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton2"
+        android:layout_width="93dp"
+        android:layout_height="60dp"
+        android:textSize="32sp"
+        android:tag="1"
+        android:background="@drawable/tictactoe_buttons"
+        app:layout_constraintEnd_toStartOf="@+id/appCompatButton3"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toEndOf="@+id/appCompatButton1"
+        app:layout_constraintTop_toTopOf="@+id/appCompatButton1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton3"
+        android:layout_width="93dp"
+        android:layout_height="60dp"
+        android:background="@drawable/tictactoe_buttons"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="32sp"
+        android:tag="2"
+        app:layout_constraintStart_toEndOf="@+id/appCompatButton2"
+        app:layout_constraintTop_toTopOf="@+id/appCompatButton1" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton4"
+        android:layout_width="93dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="52dp"
+        android:textSize="32sp"
+        android:tag="3"
+        android:background="@drawable/tictactoe_buttons"
+        app:layout_constraintEnd_toStartOf="@+id/appCompatButton5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatButton1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton5"
+        android:layout_width="93dp"
+        android:layout_height="60dp"
+        android:textSize="32sp"
+        android:tag="4"
+        android:background="@drawable/tictactoe_buttons"
+        app:layout_constraintStart_toEndOf="@id/appCompatButton4"
+        app:layout_constraintEnd_toStartOf="@+id/appCompatButton6"
+        app:layout_constraintTop_toTopOf="@+id/appCompatButton4" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton6"
+        android:layout_width="93dp"
+        android:layout_height="60dp"
+        android:textSize="32sp"
+        android:tag="5"
+        android:background="@drawable/tictactoe_buttons"
+        app:layout_constraintStart_toEndOf="@id/appCompatButton5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/appCompatButton5" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton7"
+        android:layout_width="93dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="52dp"
+        android:textSize="32sp"
+        android:tag="6"
+        android:background="@drawable/tictactoe_buttons"
+        app:layout_constraintEnd_toStartOf="@+id/appCompatButton8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatButton4" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton8"
+        android:layout_width="93dp"
+        android:layout_height="60dp"
+        android:background="@drawable/tictactoe_buttons"
+        android:tag="7"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/appCompatButton10"
+        app:layout_constraintEnd_toStartOf="@+id/appCompatButton9"
+        app:layout_constraintStart_toEndOf="@id/appCompatButton7"
+        app:layout_constraintTop_toTopOf="@+id/appCompatButton7"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton9"
+        android:layout_width="93dp"
+        android:layout_height="60dp"
+        android:textSize="32sp"
+        android:tag="8"
+        android:background="@drawable/tictactoe_buttons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/appCompatButton8"
+        app:layout_constraintTop_toTopOf="@+id/appCompatButton8" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/tictactoe_startbutton"
+        android:text="End Game"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.588"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

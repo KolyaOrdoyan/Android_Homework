@@ -1,4 +1,4 @@
-package com.example.all_android_projects.tictactoe
+package com.example.tictactoe
 
 import android.content.Intent
 import android.graphics.Color
@@ -8,11 +8,9 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
-import com.example.all_android_projects.R
-import kotlinx.android.synthetic.main.activity_tic_tac_toy.*
+import kotlinx.android.synthetic.main.activity_tic_tac_toe.*
 
-class TicTacToy : AppCompatActivity(), View.OnClickListener {
-    lateinit var b0: Button
+class TicTacToe : AppCompatActivity(), View.OnClickListener { lateinit var b0: Button
     lateinit var b1: Button
     lateinit var b2: Button
     lateinit var b3: Button
@@ -40,7 +38,7 @@ class TicTacToy : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tic_tac_toy)
+        setContentView(R.layout.activity_tic_tac_toe)
 
         filledPos = intArrayOf(-1, -1, -1, -1, -1, -1, -1, -1, -1)
 
@@ -163,5 +161,4 @@ class TicTacToy : AppCompatActivity(), View.OnClickListener {
         b7.text = ""
         b8.text = ""
     }
-
 }
