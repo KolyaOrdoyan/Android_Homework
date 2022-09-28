@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1b1d50"
-    tools:context=".tictactoy.TicTacToyRegisterPage">
+    tools:context=".tictactoe.TicTacToyRegisterPage">
 
 
     <TextView
@@ -37,7 +37,7 @@
         android:layout_height="49dp"
         android:layout_marginTop="8dp"
         android:gravity="start"
-        android:text="player one "
+        android:text=""
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,7 +61,7 @@
         android:layout_height="49dp"
         android:layout_marginTop="8dp"
         android:gravity="start"
-        android:text="player two"
+        android:text=""
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/imageView1"

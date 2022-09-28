@@ -5,8 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.widget.AppCompatButton
 import com.example.all_android_projects.calculator.CalculatorActivity
-import com.example.all_android_projects.tictactoy.TicTacToyRegisterPage
-import kotlinx.android.synthetic.main.activity_main.*
+import com.example.all_android_projects.tictactoe.TicTacToyRegisterPage
 
 class MainActivity : AppCompatActivity() {
 

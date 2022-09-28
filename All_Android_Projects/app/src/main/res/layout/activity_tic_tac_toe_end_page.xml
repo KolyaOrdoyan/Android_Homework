@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1b1d50"
-    tools:context=".tictactoy.TicTacToeEndPage">
+    tools:context=".tictactoe.TicTacToeEndPage">
 
     <TextView
         android:id="@+id/scoreBar"
@@ -16,44 +16,17 @@
         android:text="win player one"
         android:textColor="@color/white"
         android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/newPlayers"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/replay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:background="@drawable/tictactoy_startbutton"
-        android:text="Replay"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scoreBar" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/showScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:background="@drawable/tictactoy_startbutton"
-        android:text="show score"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/replay" />
-
-    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/newPlayers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="54dp"
         android:background="@drawable/tictactoy_startbutton"
         android:text="new players"
         android:textColor="@color/white"
@@ -61,7 +34,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/showScore" />
+        app:layout_constraintTop_toBottomOf="@+id/scoreBar" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/backToMainManu"

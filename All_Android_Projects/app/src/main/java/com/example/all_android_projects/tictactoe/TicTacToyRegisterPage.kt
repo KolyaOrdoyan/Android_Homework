@@ -1,12 +1,10 @@
-package com.example.all_android_projects.tictactoy
+package com.example.all_android_projects.tictactoe
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.widget.AppCompatButton
 import com.example.all_android_projects.R
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.view.*
 
 class TicTacToyRegisterPage : AppCompatActivity() {
 
@@ -22,6 +20,10 @@ class TicTacToyRegisterPage : AppCompatActivity() {
     }
 
     private fun click() {
-        setContentView(R.layout.activity_tic_tac_toy)
+
+        startgamebutton.setOnClickListener() {
+            val intent = Intent(this, TicTacToy::class.java)
+            startActivity(intent)
+        }
     }
 }
