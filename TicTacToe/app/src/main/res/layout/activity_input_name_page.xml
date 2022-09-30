@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1b1d50"
-    tools:context=".tictactoe.TicTacToyRegisterPage">
+    android:background="#05104a"
+    tools:context=".InputNamePage">
 
 
     <TextView
@@ -31,16 +31,18 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/player1"
         android:layout_width="347dp"
         android:layout_height="49dp"
         android:layout_marginTop="8dp"
         android:gravity="start"
+        android:maxLines="1"
         android:text=""
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView" />
 
@@ -54,12 +56,13 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/player2"
         android:layout_width="347dp"
         android:layout_height="49dp"
         android:layout_marginTop="8dp"
         android:gravity="start"
+        android:maxLines="1"
         android:text=""
         android:textColor="@color/white"
         android:textSize="16sp"
@@ -71,9 +74,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
+        android:background="@drawable/tictactoe_startbutton"
         android:text="Start game"
         android:textColor="@color/white"
-        android:background="@drawable/tictactoy_startbutton"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

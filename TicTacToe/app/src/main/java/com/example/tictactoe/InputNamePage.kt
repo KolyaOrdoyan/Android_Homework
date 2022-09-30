@@ -1,14 +1,13 @@
-package com.example.all_android_projects.tictactoe
+package com.example.tictactoe
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import androidx.appcompat.widget.AppCompatButton
-import com.example.all_android_projects.R
-import com.example.all_android_projects.tictactoe.gameplay.GamePlay
+import com.example.tictactoe.gameplay.GamePlay
 
-class TicTacToyRegisterPage : AppCompatActivity() {
+class InputNamePage : AppCompatActivity() {
 
     private lateinit var startgamebutton: AppCompatButton
     private lateinit var playerOneName: EditText
@@ -16,7 +15,7 @@ class TicTacToyRegisterPage : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tic_tac_toy_register_page)
+        setContentView(R.layout.activity_input_name_page)
 
         startgamebutton = findViewById(R.id.game)
         playerOneName = findViewById(R.id.player1)
@@ -34,4 +33,10 @@ class TicTacToyRegisterPage : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+//    companion object{
+//        const val  PLAYER_ONE_NAME = "player_one_name"
+//        const val  PLAYER_TWO_NAME = "player_two_name"
+//    }
+
 }

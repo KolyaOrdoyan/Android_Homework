@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1b1d50"
-    tools:context=".tictactoe.TicTacToeEndPage">
+    tools:context=".tictactoe.endpage.TicTacToeEndPage">
 
     <TextView
         android:id="@+id/scoreBar"
