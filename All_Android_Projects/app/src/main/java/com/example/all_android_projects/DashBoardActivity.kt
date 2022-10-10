@@ -5,8 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.widget.AppCompatButton
 import com.example.all_android_projects.calculator.CalculatorActivity
-import com.example.all_android_projects.lesson.Lesson
+import com.example.all_android_projects.country.Capital
 import com.example.all_android_projects.tictactoe.TicTacToyRegisterPage
+import kotlinx.android.synthetic.main.activity_dash_board.*
 
 class DashBoardActivity : AppCompatActivity() {
 
@@ -53,8 +54,8 @@ class DashBoardActivity : AppCompatActivity() {
 
         buttoncountry.setOnClickListener {
 
-//            val intent = Intent(this, CountryInformation::class.java)
-//            startActivity(intent)
+            val intent = Intent(this, Capital::class.java)
+            startActivity(intent)
 
         }
 
