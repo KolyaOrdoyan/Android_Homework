@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.widget.AppCompatButton
-import com.example.all_android_projects.MainActivity
+import com.example.all_android_projects.DashBoardActivity
 import com.example.all_android_projects.R
 import com.example.all_android_projects.tictactoe.TicTacToyRegisterPage
 
@@ -33,7 +33,7 @@ class TicTacToeEndPage : AppCompatActivity() {
 
         buttonBackToMainManu.setOnClickListener() {
 
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, DashBoardActivity::class.java)
             startActivity(intent)
 
         }

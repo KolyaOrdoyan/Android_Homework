@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#05104a"
-    tools:context=".InputNamePage">
+    tools:context=".inputnamepage.InputNamePage">
 
 
     <TextView
@@ -36,13 +36,11 @@
         android:layout_width="347dp"
         android:layout_height="49dp"
         android:layout_marginTop="8dp"
-        android:gravity="start"
         android:maxLines="1"
         android:text=""
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView" />
 
@@ -61,8 +59,7 @@
         android:layout_width="347dp"
         android:layout_height="49dp"
         android:layout_marginTop="8dp"
-        android:gravity="start"
-        android:maxLines="1"
+        android:maxLines="@integer/material_motion_duration_long_1"
         android:text=""
         android:textColor="@color/white"
         android:textSize="16sp"

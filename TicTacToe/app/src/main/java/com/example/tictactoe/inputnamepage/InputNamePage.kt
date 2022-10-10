@@ -1,10 +1,11 @@
-package com.example.tictactoe
+package com.example.tictactoe.inputnamepage
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import androidx.appcompat.widget.AppCompatButton
+import com.example.tictactoe.R
 import com.example.tictactoe.gameplay.GamePlay
 
 class InputNamePage : AppCompatActivity() {
