@@ -16,18 +16,17 @@ class Capital : AppCompatActivity(), MyCustomAdapter.OnCountryItemClickListener 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_capital)
 
-
         recyclerView = findViewById(R.id.recyclerView)
 
         recyclerView.apply {
-            layoutManager =  LinearLayoutManager(this@Capital)
-            adapter =  MyCustomAdapter(this@Capital)
+            layoutManager = LinearLayoutManager(this@Capital)
+            adapter = MyCustomAdapter(this@Capital)
 
         }
     }
+
     override fun onCountryItemClicked(countryEnum: CountryEnum) {
         // TODO:   start activity and send country Enum with bundles
-    
     }
 
 }
