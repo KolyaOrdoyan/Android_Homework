@@ -25,6 +25,13 @@ class Capital : AppCompatActivity(), MyCustomAdapter.OnCountryItemClickListener 
         }
     }
 
+    fun <T : RecyclerView.ViewHolder> T.listen(event: (position: Int, type: Int) -> Unit): T {
+        itemView.setOnClickListener {
+            event.invoke(adapterPosition, itemViewType)
+        }
+        return this
+    }
+
     override fun onCountryItemClicked(countryEnum: CountryEnum) {
         // TODO:   start activity and send country Enum with bundles
     }

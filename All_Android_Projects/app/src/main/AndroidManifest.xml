@@ -15,14 +15,14 @@
         android:theme="@style/Theme.All_Android_Projects"
         tools:targetApi="31">
         <activity
-            android:name=".country.ui.CountryInformationPage"
+            android:name=".country.ui.CountryFlagPage"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".country.ui.CountryInformationPage"
+            android:name=".country.ui.CapitalMoreInformation"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

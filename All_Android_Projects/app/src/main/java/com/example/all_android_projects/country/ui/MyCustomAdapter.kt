@@ -1,17 +1,16 @@
 package com.example.all_android_projects.country.ui
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.widget.AppCompatImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.all_android_projects.R
 import com.example.all_android_projects.country.Capital
 import com.example.all_android_projects.country.date.CountryEnum
-import kotlin.coroutines.coroutineContext
 
 class MyCustomAdapter(val countryItemClickListener: OnCountryItemClickListener) :
     RecyclerView.Adapter<MyCustomAdapter.ViewHolder>() {
@@ -30,10 +29,10 @@ class MyCustomAdapter(val countryItemClickListener: OnCountryItemClickListener) 
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        private var countryFlagImage: ImageView
-        private var capital: TextView
-        private var independenceDay: TextView
-        private var information: TextView
+        var countryFlagImage: ImageView
+        var capital: TextView
+        var independenceDay: TextView
+        var information: TextView
 
         fun bind(country: CountryEnum) {
 
@@ -54,14 +53,25 @@ class MyCustomAdapter(val countryItemClickListener: OnCountryItemClickListener) 
             information = itemView.findViewById(R.id.information_text)
 
 
-
-            itemView.setOnClickListener {
-                val currentItem = items[adapterPosition]
-                countryItemClickListener.onCountryItemClicked(currentItem)
+            countryFlagImage.setOnClickListener {
+                val intent = Intent(itemView.context, CountryFlagPage::class.java)
+                intent.apply {
+                    putExtra("flag page", items[position].imageUrl)
+                }
+                itemView.context.startActivity(intent)
             }
+
+            itemView.setOnLongClickListener(View.OnLongClickListener() {
+                val intent = Intent(itemView.context, CapitalMoreInformation::class.java)
+                intent.apply {
+                    putExtra("flag", items[position].imageUrl)
+                    putExtra("country name", items[position].capital)
+                    putExtra("independence day", items[position].independenceDay)
+                    putExtra("information", items[position].moreInformation)
+                }
+                return@OnLongClickListener true
+            })
         }
-
-
     }
 
     interface OnCountryItemClickListener {
