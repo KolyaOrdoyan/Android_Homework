@@ -9,7 +9,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.all_android_projects.R
-import com.example.all_android_projects.country.Capital
 import com.example.all_android_projects.country.date.CountryEnum
 
 class MyCustomAdapter(val countryItemClickListener: OnCountryItemClickListener) :
@@ -69,6 +68,7 @@ class MyCustomAdapter(val countryItemClickListener: OnCountryItemClickListener) 
                     putExtra("independence day", items[position].independenceDay)
                     putExtra("information", items[position].moreInformation)
                 }
+                itemView.context.startActivity(intent)
                 return@OnLongClickListener true
             })
         }
