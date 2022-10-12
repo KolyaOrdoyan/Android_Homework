@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -15,54 +15,28 @@
         android:theme="@style/Theme.All_Android_Projects"
         tools:targetApi="31">
         <activity
-            android:name=".country.ui.CountryFlagPage"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+            android:name=".country.ui.CountryFlagPageActivity"
+            android:exported="false" />
         <activity
-            android:name=".country.ui.CapitalMoreInformation"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+            android:name=".country.ui.CapitalMoreInformationActivity"
+            android:exported="false" />
         <activity
-            android:name=".country.Capital"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+            android:name=".country.ui.CapitalActivity"
+            android:exported="false" />
         <activity
-            android:name=".lesson.Lesson"
+            android:name=".lesson.LessonActivity"
             android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+
         </activity>
         <activity
             android:name=".tictactoe.endpage.TicTacToeEndPage"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".tictactoe.TicTacToyRegisterPage"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".tictactoe.gameplay.GamePlay"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".calculator.CalculatorActivity"
             android:exported="false" />
@@ -70,14 +44,9 @@
         <meta-data
             android:name="android.app.lib_name"
             android:value="" />
-
         <activity
             android:name=".DashBoardActivity"
             android:exported="true">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

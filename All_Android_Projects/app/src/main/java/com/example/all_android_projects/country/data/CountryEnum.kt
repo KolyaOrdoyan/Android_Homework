@@ -1,4 +1,4 @@
-package com.example.all_android_projects.country.date
+package com.example.all_android_projects.country.data
 
 enum class CountryEnum(
     val imageUrl: String,

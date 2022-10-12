@@ -9,10 +9,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.all_android_projects.R
-import com.example.all_android_projects.country.date.CountryEnum
+import com.example.all_android_projects.country.data.CountryEnum
 
-class MyCustomAdapter(val countryItemClickListener: OnCountryItemClickListener) :
-    RecyclerView.Adapter<MyCustomAdapter.ViewHolder>() {
+class CountryAdapter(val countryItemClickListener: OnCountryItemClickListener) :
+    RecyclerView.Adapter<CountryAdapter.ViewHolder>() {
 
     private val items = CountryEnum.values()
 
@@ -53,7 +53,7 @@ class MyCustomAdapter(val countryItemClickListener: OnCountryItemClickListener) 
 
 
             countryFlagImage.setOnClickListener {
-                val intent = Intent(itemView.context, CountryFlagPage::class.java)
+                val intent = Intent(itemView.context, CountryFlagPageActivity::class.java)
                 intent.apply {
                     putExtra("flag page", items[position].imageUrl)
                 }
@@ -61,7 +61,7 @@ class MyCustomAdapter(val countryItemClickListener: OnCountryItemClickListener) 
             }
 
             itemView.setOnLongClickListener(View.OnLongClickListener() {
-                val intent = Intent(itemView.context, CapitalMoreInformation::class.java)
+                val intent = Intent(itemView.context, CapitalMoreInformationActivity::class.java)
                 intent.apply {
                     putExtra("flag", items[position].imageUrl)
                     putExtra("country name", items[position].capital)

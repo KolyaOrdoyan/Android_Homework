@@ -1,15 +1,13 @@
-package com.example.all_android_projects.country
+package com.example.all_android_projects.country.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.all_android_projects.R
-import com.example.all_android_projects.country.date.CountryEnum
-import com.example.all_android_projects.country.ui.MyCustomAdapter
+import com.example.all_android_projects.country.`data/model`.CountryEnum
 
-class Capital : AppCompatActivity(), MyCustomAdapter.OnCountryItemClickListener {
-
+class CapitalActivity : AppCompatActivity(), CountryAdapter.OnCountryItemClickListener {
     private lateinit var recyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,12 +17,12 @@ class Capital : AppCompatActivity(), MyCustomAdapter.OnCountryItemClickListener 
         recyclerView = findViewById(R.id.recyclerView)
 
         recyclerView.apply {
-            layoutManager = LinearLayoutManager(this@Capital)
-            adapter = MyCustomAdapter(this@Capital)
+            layoutManager = LinearLayoutManager(this@CapitalActivity)
+            adapter = CountryAdapter(this@CapitalActivity)
 
         }
     }
-
+// sxal
     fun <T : RecyclerView.ViewHolder> T.listen(event: (position: Int, type: Int) -> Unit): T {
         itemView.setOnClickListener {
             event.invoke(adapterPosition, itemViewType)

@@ -3,11 +3,10 @@ package com.example.all_android_projects
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.RadioButton
 import androidx.appcompat.widget.AppCompatButton
 import com.example.all_android_projects.calculator.CalculatorActivity
-import com.example.all_android_projects.country.Capital
+import com.example.all_android_projects.country.ui.CapitalActivity
 import com.example.all_android_projects.tictactoe.TicTacToyRegisterPage
 import kotlinx.android.synthetic.main.activity_dash_board.*
 
@@ -60,7 +59,7 @@ class DashBoardActivity : AppCompatActivity() {
 
         buttoncountry.setOnClickListener {
 
-            val intent = Intent(this, Capital::class.java)
+            val intent = Intent(this, CapitalActivity::class.java)
             startActivity(intent)
 
         }
