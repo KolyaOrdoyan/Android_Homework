@@ -1,4 +1,23 @@
 <resources>
     <string name="app_name">All_Android_Projects</string>
+    <string name="welcome_to_kolya_projects">Welcome to Kolya projects</string>
+    <string name="pleas_choose_one_of_these">Pleas choose one of these</string>
+    <string name="calculator">Calculator</string>
+    <string name="tic_tac_toy">Tic Tac Toy</string>
+    <string name="lesson">Lesson</string>
+    <string name="country">Country</string>
+    <string name="list_page">List Page</string>
+    <string name="do_you_like_this_style">Do you like this style?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="title_activity_list_page">ListPageActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
 
 </resources>

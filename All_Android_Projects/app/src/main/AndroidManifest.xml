@@ -16,6 +16,11 @@
         android:theme="@style/Style"
         tools:targetApi="31">
         <activity
+            android:name=".sharepage.ChooseTypeActivity"
+            android:exported="false">
+        </activity>
+
+        <activity
             android:name=".country.ui.next_pages.CountryFlagPageActivity"
             android:exported="false" />
         <activity
@@ -26,7 +31,7 @@
             android:exported="false" />
         <activity
             android:name=".lesson.LessonActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".tictactoe.endpage.TicTacToeEndPageActivity"
             android:exported="false" />
@@ -39,9 +44,11 @@
         <activity
             android:name=".calculator.CalculatorActivity"
             android:exported="false" />
+
         <meta-data
             android:name="android.app.lib_name"
             android:value="" />
+
         <activity
             android:name=".DashBoardActivity"
             android:exported="true">
