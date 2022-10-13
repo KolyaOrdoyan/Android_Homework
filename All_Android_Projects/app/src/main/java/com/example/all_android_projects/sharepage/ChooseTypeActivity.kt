@@ -7,6 +7,6 @@ import com.example.all_android_projects.R
 class ChooseTypeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_chusse_type)
+        setContentView(R.layout.activity_choose_type)
     }
 }
