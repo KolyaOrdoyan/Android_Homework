@@ -6,8 +6,8 @@ import android.os.Bundle
 import android.widget.RadioButton
 import androidx.appcompat.widget.AppCompatButton
 import com.example.all_android_projects.calculator.CalculatorActivity
-import com.example.all_android_projects.country.ui.CapitalActivity
-import com.example.all_android_projects.tictactoe.TicTacToyRegisterPage
+import com.example.all_android_projects.country.ui.CountryListActivity
+import com.example.all_android_projects.tictactoe.TicTacToyRegisterPageActivity
 import kotlinx.android.synthetic.main.activity_dash_board.*
 
 class DashBoardActivity : AppCompatActivity() {
@@ -45,7 +45,7 @@ class DashBoardActivity : AppCompatActivity() {
 
         buttontictactoy.setOnClickListener() {
 
-            val intent = Intent(this, TicTacToyRegisterPage::class.java)
+            val intent = Intent(this, TicTacToyRegisterPageActivity::class.java)
             startActivity(intent)
 
         }
@@ -59,7 +59,7 @@ class DashBoardActivity : AppCompatActivity() {
 
         buttoncountry.setOnClickListener {
 
-            val intent = Intent(this, CapitalActivity::class.java)
+            val intent = Intent(this, CountryListActivity::class.java)
             startActivity(intent)
 
         }

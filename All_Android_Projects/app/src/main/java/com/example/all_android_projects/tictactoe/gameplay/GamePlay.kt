@@ -9,7 +9,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import com.example.all_android_projects.R
-import com.example.all_android_projects.tictactoe.endpage.TicTacToeEndPage
+import com.example.all_android_projects.tictactoe.endpage.TicTacToeEndPageActivity
 import kotlinx.android.synthetic.main.activity_game_play.*
 
 class GamePlay : AppCompatActivity(), View.OnClickListener {
@@ -157,7 +157,7 @@ class GamePlay : AppCompatActivity(), View.OnClickListener {
 
     private fun clickEndButton() {
         appCompatButton10.setOnClickListener {
-            val intent = Intent(this, TicTacToeEndPage::class.java)
+            val intent = Intent(this, TicTacToeEndPageActivity::class.java)
             startActivity(intent)
 
         }

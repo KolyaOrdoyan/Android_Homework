@@ -6,9 +6,9 @@ import android.os.Bundle
 import androidx.appcompat.widget.AppCompatButton
 import com.example.all_android_projects.DashBoardActivity
 import com.example.all_android_projects.R
-import com.example.all_android_projects.tictactoe.TicTacToyRegisterPage
+import com.example.all_android_projects.tictactoe.TicTacToyRegisterPageActivity
 
-class TicTacToeEndPage : AppCompatActivity() {
+class TicTacToeEndPageActivity : AppCompatActivity() {
     private lateinit var buttonNewPlayers: AppCompatButton
     private lateinit var buttonBackToMainManu: AppCompatButton
 
@@ -26,7 +26,7 @@ class TicTacToeEndPage : AppCompatActivity() {
 
         buttonNewPlayers.setOnClickListener() {
 
-            val intent = Intent(this, TicTacToyRegisterPage::class.java)
+            val intent = Intent(this, TicTacToyRegisterPageActivity::class.java)
             startActivity(intent)
 
         }

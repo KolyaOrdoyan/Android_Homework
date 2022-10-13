@@ -8,7 +8,7 @@ import androidx.appcompat.widget.AppCompatButton
 import com.example.all_android_projects.R
 import com.example.all_android_projects.tictactoe.gameplay.GamePlay
 
-class TicTacToyRegisterPage : AppCompatActivity() {
+class TicTacToyRegisterPageActivity : AppCompatActivity() {
 
     private lateinit var startgamebutton: AppCompatButton
     private lateinit var playerOneName: EditText

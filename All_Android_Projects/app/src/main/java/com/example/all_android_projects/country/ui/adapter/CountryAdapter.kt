@@ -1,6 +1,5 @@
-package com.example.all_android_projects.country.ui
+package com.example.all_android_projects.country.ui.adapter
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,10 +8,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.all_android_projects.R
+import com.example.all_android_projects.country.ui.ClassForFunctions
 import com.example.all_android_projects.country.data.CountryEnum
 
-class CountryAdapter(val countryItemClickListener: OnCountryItemClickListener) :
-    RecyclerView.Adapter<CountryAdapter.ViewHolder>() {
+class CountryAdapter() : RecyclerView.Adapter<CountryAdapter.ViewHolder>() {
 
     private val items = CountryEnum.values()
 
@@ -53,28 +52,24 @@ class CountryAdapter(val countryItemClickListener: OnCountryItemClickListener) :
 
 
             countryFlagImage.setOnClickListener {
-                val intent = Intent(itemView.context, CountryFlagPageActivity::class.java)
-                intent.apply {
-                    putExtra("flag page", items[position].imageUrl)
-                }
-                itemView.context.startActivity(intent)
+                var continuePage = ClassForFunctions()
+                continuePage.goToImagePage(itemView, position)
             }
 
             itemView.setOnLongClickListener(View.OnLongClickListener() {
-                val intent = Intent(itemView.context, CapitalMoreInformationActivity::class.java)
-                intent.apply {
-                    putExtra("flag", items[position].imageUrl)
-                    putExtra("country name", items[position].capital)
-                    putExtra("independence day", items[position].independenceDay)
-                    putExtra("information", items[position].moreInformation)
-                }
-                itemView.context.startActivity(intent)
+                var continuePage = ClassForFunctions()
+                continuePage.goToPage(itemView, position)
                 return@OnLongClickListener true
             })
         }
     }
 
-    interface OnCountryItemClickListener {
-        fun onCountryItemClicked(countryEnum: CountryEnum)
+    companion object {
+        const val COUNTRY_NAME = "country name"
+        const val FLAG = "flag"
+        const val INDEPENDENCE_DAY = "independence day"
+        const val INFORMATION = "information"
+        const val FLAG_PAGE = "flag page"
     }
+
 }
