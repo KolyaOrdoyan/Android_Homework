@@ -13,13 +13,20 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Style"
+        android:theme="@style/Theme.AppCompat"
         tools:targetApi="31">
         <activity
+            android:name=".sharepage.ui.show_page.ShowUrlPageActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".sharepage.ui.show_page.ShowVideoPageActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".sharepage.ui.show_page.ShowImagePageActivity"
+            android:exported="false"/>
+        <activity
             android:name=".sharepage.ChooseTypeActivity"
-            android:exported="false">
-        </activity>
-
+            android:exported="false" />
         <activity
             android:name=".country.ui.next_pages.CountryFlagPageActivity"
             android:exported="false" />

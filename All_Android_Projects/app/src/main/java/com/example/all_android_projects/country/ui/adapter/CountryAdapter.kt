@@ -38,7 +38,6 @@ class CountryAdapter() : RecyclerView.Adapter<CountryAdapter.ViewHolder>() {
                 .load(country.imageUrl)
                 .centerCrop()
                 .into(countryFlagImage)
-
             capital.text = country.capital
             independenceDay.text = country.independenceDay
             information.text = country.information

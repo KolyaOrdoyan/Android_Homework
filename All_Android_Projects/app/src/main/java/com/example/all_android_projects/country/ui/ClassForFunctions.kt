@@ -22,6 +22,8 @@ class ClassForFunctions {
         itemView.context.startActivity(intent)
     }
 
+
+    
     fun goToImagePage(itemView: View, position: Int) {
         val intent = Intent(itemView.context, CountryFlagPageActivity::class.java)
         intent.apply {
