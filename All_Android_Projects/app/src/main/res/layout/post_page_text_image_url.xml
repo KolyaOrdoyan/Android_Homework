@@ -28,17 +28,16 @@
         android:id="@+id/text_url"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
+        android:text=""
         android:textColor="@color/white"
-        android:text=""/>
+        android:textSize="16sp" />
 
     <WebView
         android:id="@+id/webView_URL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_post"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/imageView_post">
 
     </WebView>
 
@@ -63,6 +62,15 @@
             android:textColor="@color/white"
             android:textSize="20sp" />
 
+        <TextView
+            android:id="@+id/TextView_Like_Count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
         <ImageView
             android:id="@+id/imageView_comment"
             android:layout_width="wrap_content"
@@ -76,6 +84,15 @@
             android:layout_height="match_parent"
             android:layout_marginStart="5dp"
             android:text="@string/comment"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/TextView_comment_Count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text=""
             android:textColor="@color/white"
             android:textSize="20sp" />
 

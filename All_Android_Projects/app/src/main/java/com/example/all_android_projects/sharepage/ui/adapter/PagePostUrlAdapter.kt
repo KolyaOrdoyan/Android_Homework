@@ -16,7 +16,10 @@ class PagePostUrlAdapter : RecyclerView.Adapter<PagePostUrlAdapter.ViewHolder>()
     private val items = PostEnumUrl.values()
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PagePostUrlAdapter.ViewHolder =
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): PagePostUrlAdapter.ViewHolder =
         ViewHolder(
             LayoutInflater.from(parent.context)
                 .inflate(R.layout.post_page_text_image_url, parent, false)
@@ -32,27 +35,36 @@ class PagePostUrlAdapter : RecyclerView.Adapter<PagePostUrlAdapter.ViewHolder>()
         private var textUrlTextView: TextView
         private var imageViewPost: ImageView
         private var webViewUrl: WebView
+        private var textViewLike: TextView
+        private var textViewLikeCount: TextView
+        private var count: Int = 0
 
         init {
             textViewStatus = itemView.findViewById(R.id.Status_TextView)
             textUrlTextView = itemView.findViewById(R.id.text_url)
             imageViewPost = itemView.findViewById(R.id.imageView_post)
             webViewUrl = itemView.findViewById(R.id.webView_URL)
+            textViewLike = itemView.findViewById(R.id.TextView_like)
+            textViewLikeCount = itemView.findViewById(R.id.TextView_Like_Count)
         }
 
         fun bind(status: PostEnumUrl) {
             textViewStatus.text = status.post
+
             Glide.with(itemView.context)
                 .load(status.image)
                 .centerCrop()
                 .into(imageViewPost)
+
             textUrlTextView.text = status.vebViewUrl
-            textUrlTextView.setOnClickListener{
+
+            textUrlTextView.setOnClickListener {
                 webViewUrl.loadUrl(status.vebViewUrl)
             }
-//            webViewUrl.setOnClickListener {
-//
-//            }
+            textViewLike.setOnClickListener {
+                count += 1
+                textViewLikeCount.text = count.toString()
+            }
         }
 
     }

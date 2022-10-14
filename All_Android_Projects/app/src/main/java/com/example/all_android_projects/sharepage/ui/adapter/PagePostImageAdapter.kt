@@ -16,7 +16,10 @@ class PagePostImageAdapter : RecyclerView.Adapter<PagePostImageAdapter.ViewHolde
     private val items = PostEnumImage.values()
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PagePostImageAdapter.ViewHolder =
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): PagePostImageAdapter.ViewHolder =
         ViewHolder(
             LayoutInflater.from(parent.context)
                 .inflate(R.layout.post_page_text_image, parent, false)
@@ -31,12 +34,15 @@ class PagePostImageAdapter : RecyclerView.Adapter<PagePostImageAdapter.ViewHolde
 
         private var textViewStatus: TextView
         private var imageViewPost: ImageView
-
-
+        private var textViewLike: TextView
+        private var textViewLikeCount: TextView
+        private var count: Int = 0
 
         init {
             textViewStatus = itemView.findViewById(R.id.Status_TextView)
             imageViewPost = itemView.findViewById(R.id.imageView_post)
+            textViewLike = itemView.findViewById(R.id.TextView_like)
+            textViewLikeCount = itemView.findViewById(R.id.TextView_Like_Count)
 
         }
 
@@ -46,6 +52,10 @@ class PagePostImageAdapter : RecyclerView.Adapter<PagePostImageAdapter.ViewHolde
                 .load(status.image)
                 .centerCrop()
                 .into(imageViewPost)
+            textViewLike.setOnClickListener {
+                count += 1
+                textViewLikeCount.text = count.toString()
+            }
         }
 
     }

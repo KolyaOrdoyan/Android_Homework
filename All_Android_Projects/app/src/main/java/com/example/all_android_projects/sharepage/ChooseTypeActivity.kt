@@ -26,13 +26,13 @@ class ChooseTypeActivity : AppCompatActivity() {
 
     private fun click() {
         nextPageButton.setOnClickListener {
-            if (checkbox_image.isChecked) {
+            if (radioButtonImage.isChecked) {
                 val intent = Intent(this, ShowImagePageActivity::class.java)
                 startActivity(intent)
-            } else if (checkbox_video.isChecked) {
+            } else if (radioButtonVideo.isChecked) {
                 val intent = Intent(this, ShowVideoPageActivity::class.java)
                 startActivity(intent)
-            } else if (checkbox_url.isChecked) {
+            } else if (radioButtonUrl.isChecked) {
                 val intent = Intent(this, ShowUrlPageActivity::class.java)
                 startActivity(intent)
             } else {
