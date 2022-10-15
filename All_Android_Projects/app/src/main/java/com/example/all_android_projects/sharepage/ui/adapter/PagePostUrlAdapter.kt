@@ -1,5 +1,6 @@
 package com.example.all_android_projects.sharepage.ui.adapter
 
+import android.app.Dialog
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,10 +34,11 @@ class PagePostUrlAdapter : RecyclerView.Adapter<PagePostUrlAdapter.ViewHolder>()
 
         private var textViewStatus: TextView
         private var textUrlTextView: TextView
-        private var imageViewPost: ImageView
-        private var webViewUrl: WebView
         private var textViewLike: TextView
         private var textViewLikeCount: TextView
+        private var statusLongTextView: TextView
+        private var imageViewPost: ImageView
+        private var webViewUrl: WebView
         private var count: Int = 0
 
         init {
@@ -46,10 +48,15 @@ class PagePostUrlAdapter : RecyclerView.Adapter<PagePostUrlAdapter.ViewHolder>()
             webViewUrl = itemView.findViewById(R.id.webView_URL)
             textViewLike = itemView.findViewById(R.id.TextView_like)
             textViewLikeCount = itemView.findViewById(R.id.TextView_Like_Count)
+            statusLongTextView = itemView.findViewById(R.id.Status_long_TextView)
         }
 
         fun bind(status: PostEnumUrl) {
             textViewStatus.text = status.post
+            textViewStatus.setOnClickListener {
+                textViewStatus.text = ""
+                statusLongTextView.text = status.post
+            }
 
             Glide.with(itemView.context)
                 .load(status.image)
@@ -64,6 +71,17 @@ class PagePostUrlAdapter : RecyclerView.Adapter<PagePostUrlAdapter.ViewHolder>()
             textViewLike.setOnClickListener {
                 count += 1
                 textViewLikeCount.text = count.toString()
+            }
+
+            imageViewPost.setOnClickListener {
+                val builder = Dialog(itemView.context)
+                builder.apply {
+                    setTitle(status.image)
+                    setContentView(R.layout.show_news_image)
+                    builder.show()
+                }
+                Glide.with(itemView.context).load(status.image).centerCrop()
+                    .into(builder.findViewById(R.id.news_image))
             }
         }
 

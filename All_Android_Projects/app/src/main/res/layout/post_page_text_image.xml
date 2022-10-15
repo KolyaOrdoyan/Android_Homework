@@ -9,6 +9,7 @@
         android:id="@+id/LinerLayout_View"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -16,12 +17,24 @@
 
         <TextView
             android:id="@+id/Status_TextView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:gravity="center"
+            android:ellipsize="end"
+            android:maxLines="1"
             android:text=""
             android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/Status_long_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
 
         <ImageView
             android:id="@+id/imageView_post"
@@ -31,9 +44,9 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@+id/LinerLayout_View">
 

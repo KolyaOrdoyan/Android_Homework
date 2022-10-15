@@ -28,4 +28,6 @@
     <string name="share">Share</string>
     <string name="comment">Comment</string>
     <string name="like">Like</string>
+    <string name="add">add</string>
+    <string name="cancel">cancel</string>
 </resources>

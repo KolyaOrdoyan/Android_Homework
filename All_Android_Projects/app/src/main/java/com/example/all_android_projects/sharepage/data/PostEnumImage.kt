@@ -3,8 +3,8 @@ package com.example.all_android_projects.sharepage.data
 enum class PostEnumImage(val post: String, val image: String) {
     STATUS_ONE("Hello World", "https://helloworld.gr/share-image.jpg"),
     STATUS_TWO(
-        "Жизнь на Марсе В 2022 году Илон Маск опубликовал «Жизнь на Марсе казалась сказкой много-много лет, казалась невозможной». ",
-        "https://static.scientificamerican.com/sciam/cache/file/C454F5A6-536E-4C9F-AA6AF354BB85A85B.jpg"
+        "Почему iPhone 14 в России продают по курсу 106 рублей за доллар ",
+        "https://img.gazeta.ru/files3/117/15418117/30-pic4_zoom-1500x1500-68887.jpg"
     ),
     STATUS_THREE(
         "Имеет наглость выглядеть героем». В Пентагоне удивились отказу Маска платить за Starlink на Украине",
