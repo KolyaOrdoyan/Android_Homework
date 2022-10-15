@@ -15,20 +15,12 @@ class PagePostImageAdapter : RecyclerView.Adapter<PagePostImageAdapter.ViewHolde
 
     private val items = PostEnumImage.values()
 
-
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): PagePostImageAdapter.ViewHolder =
-        ViewHolder(
-            LayoutInflater.from(parent.context)
-                .inflate(R.layout.post_page_text_image, parent, false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PagePostImageAdapter.ViewHolder =
+        ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.post_page_text_image, parent, false)
         )
-
 
     override fun onBindViewHolder(holder: PagePostImageAdapter.ViewHolder, position: Int) =
         holder.bind(items[position])
-
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -36,6 +28,8 @@ class PagePostImageAdapter : RecyclerView.Adapter<PagePostImageAdapter.ViewHolde
         private var textViewLike: TextView
         private var textViewLikeCount: TextView
         private var statusLongTextView: TextView
+        private var comment: TextView
+        private var commentCount: TextView
         private var imageViewPost: ImageView
         private var count: Int = 0
 
@@ -45,6 +39,8 @@ class PagePostImageAdapter : RecyclerView.Adapter<PagePostImageAdapter.ViewHolde
             textViewLike = itemView.findViewById(R.id.TextView_like)
             textViewLikeCount = itemView.findViewById(R.id.TextView_Like_Count)
             statusLongTextView = itemView.findViewById(R.id.Status_long_TextView)
+            comment = itemView.findViewById(R.id.TextView_comment)
+            commentCount = itemView.findViewById(R.id.TextView_comment_Count)
 
         }
 
@@ -75,8 +71,17 @@ class PagePostImageAdapter : RecyclerView.Adapter<PagePostImageAdapter.ViewHolde
                 count += 1
                 textViewLikeCount.text = count.toString()
             }
-        }
 
+            comment.setOnClickListener {
+                val builder = Dialog(itemView.context)
+                builder.apply {
+                    count += 1
+                    commentCount.text = count.toString()
+                    setContentView(R.layout.add_comment_page)
+                    builder.show()
+                }
+            }
+        }
     }
 
     override fun getItemCount(): Int = items.size

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#323232"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
@@ -18,17 +19,18 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
 
-        <EditText
-            android:id="@+id/add_comment_editText"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:gravity="start|top"
-            android:padding="5dp"
-            android:textColor="@color/white"
-            android:textSize="15sp"
-            android:maxLength="10"
-            app:layout_constraintTop_toBottomOf="@+id/Comment_textView"
-            app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/add_comment_editText"
+        android:layout_width="410dp"
+        android:layout_height="200dp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:gravity="start"
+        android:text=""
+        app:layout_constraintTop_toBottomOf="@+id/Comment_textView"
+        app:layout_constraintStart_toStartOf="parent"
+        />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/add_comment_button"
@@ -36,6 +38,7 @@
         android:layout_height="wrap_content"
         android:text="@string/add"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cancel_comment_button"
         app:layout_constraintTop_toBottomOf="@+id/add_comment_editText"/>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -44,6 +47,7 @@
         android:layout_height="wrap_content"
         android:text="@string/cancel"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/add_comment_button"
         app:layout_constraintTop_toBottomOf="@+id/add_comment_editText"/>
 
 

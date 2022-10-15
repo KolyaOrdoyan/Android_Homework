@@ -17,11 +17,7 @@ class PagePostUrlAdapter : RecyclerView.Adapter<PagePostUrlAdapter.ViewHolder>()
     private val items = PostEnumUrl.values()
 
 
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): PagePostUrlAdapter.ViewHolder =
-        ViewHolder(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PagePostUrlAdapter.ViewHolder = ViewHolder(
             LayoutInflater.from(parent.context)
                 .inflate(R.layout.post_page_text_image_url, parent, false)
         )
@@ -37,6 +33,8 @@ class PagePostUrlAdapter : RecyclerView.Adapter<PagePostUrlAdapter.ViewHolder>()
         private var textViewLike: TextView
         private var textViewLikeCount: TextView
         private var statusLongTextView: TextView
+        private var comment: TextView
+        private var commentCount: TextView
         private var imageViewPost: ImageView
         private var webViewUrl: WebView
         private var count: Int = 0
@@ -49,6 +47,8 @@ class PagePostUrlAdapter : RecyclerView.Adapter<PagePostUrlAdapter.ViewHolder>()
             textViewLike = itemView.findViewById(R.id.TextView_like)
             textViewLikeCount = itemView.findViewById(R.id.TextView_Like_Count)
             statusLongTextView = itemView.findViewById(R.id.Status_long_TextView)
+            comment = itemView.findViewById(R.id.TextView_comment)
+            commentCount = itemView.findViewById(R.id.TextView_comment_Count)
         }
 
         fun bind(status: PostEnumUrl) {
@@ -82,6 +82,16 @@ class PagePostUrlAdapter : RecyclerView.Adapter<PagePostUrlAdapter.ViewHolder>()
                 }
                 Glide.with(itemView.context).load(status.image).centerCrop()
                     .into(builder.findViewById(R.id.news_image))
+            }
+
+            comment.setOnClickListener {
+                val builder = Dialog(itemView.context)
+                builder.apply {
+                    count += 1
+                    commentCount.text = count.toString()
+                    setContentView(R.layout.add_comment_page)
+                    builder.show()
+                }
             }
         }
 
