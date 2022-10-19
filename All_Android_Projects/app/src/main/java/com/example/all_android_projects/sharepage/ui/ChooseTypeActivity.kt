@@ -1,4 +1,4 @@
-package com.example.all_android_projects.sharepage
+package com.example.all_android_projects.sharepage.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

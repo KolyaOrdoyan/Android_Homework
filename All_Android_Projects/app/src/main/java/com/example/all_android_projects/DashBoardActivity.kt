@@ -7,7 +7,7 @@ import android.widget.RadioButton
 import androidx.appcompat.widget.AppCompatButton
 import com.example.all_android_projects.calculator.CalculatorActivity
 import com.example.all_android_projects.country.ui.CountryListActivity
-import com.example.all_android_projects.sharepage.ChooseTypeActivity
+import com.example.all_android_projects.sharepage.ui.ChooseTypeActivity
 import com.example.all_android_projects.tictactoe.TicTacToyRegisterPageActivity
 import kotlinx.android.synthetic.main.activity_dash_board.*
 
