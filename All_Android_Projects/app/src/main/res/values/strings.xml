@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">All_Android_Projects</string>
+
     <string name="welcome_to_kolya_projects">Welcome to Kolya projects</string>
     <string name="pleas_choose_one_of_these">Pleas choose one of these</string>
     <string name="calculator">Calculator</string>
@@ -7,27 +8,32 @@
     <string name="lesson">Lesson</string>
     <string name="country">Country</string>
     <string name="list_page">List Page</string>
+    <string name="menu_variety">menu variety</string>
+
+
     <string name="do_you_like_this_style">Do you like this style?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
-    <string name="title_activity_list_page">ListPageActivity</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+
+
     <string name="welcome_to_program_pleas_choose_type_for_list">Welcome to program pleas choose type for list</string>
     <string name="image">image</string>
     <string name="status">status</string>
     <string name="url">url</string>
     <string name="video">video</string>
     <string name="proceed">proceed</string>
+
     <string name="share">Share</string>
     <string name="comment">Comment</string>
     <string name="like">Like</string>
     <string name="add">add</string>
     <string name="cancel">cancel</string>
+
+    <string name="alertdialog">AlertDialog</string>
+    <string name="date_picker">date picker</string>
+    <string name="timepicker">Time Picker</string>
+    <string name="options_menu">Options Menu</string>
+    <string name="context_menu">Context Menu</string>
+    <string name="popup_menu">Popup Menu</string>
+
 </resources>

@@ -7,6 +7,7 @@ import android.widget.RadioButton
 import androidx.appcompat.widget.AppCompatButton
 import com.example.all_android_projects.calculator.CalculatorActivity
 import com.example.all_android_projects.country.ui.CountryListActivity
+import com.example.all_android_projects.menuvariety.MenuVarietyActivity
 import com.example.all_android_projects.sharepage.ui.ChooseTypeActivity
 import com.example.all_android_projects.tictactoe.TicTacToyRegisterPageActivity
 import kotlinx.android.synthetic.main.activity_dash_board.*
@@ -18,6 +19,7 @@ class DashBoardActivity : AppCompatActivity() {
     private lateinit var buttonlesson: AppCompatButton
     private lateinit var buttoncountry: AppCompatButton
     private lateinit var buttonListPage: AppCompatButton
+    private lateinit var button: AppCompatButton
     private lateinit var radiobuttonyes: RadioButton
     private lateinit var radiobuttonno: RadioButton
 
@@ -30,6 +32,7 @@ class DashBoardActivity : AppCompatActivity() {
         buttonlesson = findViewById(R.id.Lesson)
         buttoncountry = findViewById(R.id.Country)
         buttonListPage = findViewById(R.id.list_page)
+        button = findViewById(R.id.menu_variety)
         radiobuttonyes = findViewById(R.id.radioButtonYes)
         radiobuttonno = findViewById(R.id.radioButtonNo)
 
@@ -72,6 +75,11 @@ class DashBoardActivity : AppCompatActivity() {
             val intent = Intent(this, ChooseTypeActivity::class.java)
             startActivity(intent)
 
+        }
+
+        button.setOnClickListener {
+            val intent = Intent(this,MenuVarietyActivity::class.java)
+            startActivity(intent)
         }
     }
 

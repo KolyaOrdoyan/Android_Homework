@@ -16,7 +16,7 @@ import com.bumptech.glide.Glide
 import com.example.all_android_projects.R
 import com.example.all_android_projects.sharepage.data.PostAllParameters
 
-class AllPageAdapter : RecyclerView.Adapter<AllPageAdapter.BaseViewHolder>() {
+class AllShowPageAdapter : RecyclerView.Adapter<AllShowPageAdapter.BaseViewHolder>() {
     var viewTypee: Int = 0
     private lateinit var context: Context
     private lateinit var layoutInflater: LayoutInflater
@@ -30,27 +30,9 @@ class AllPageAdapter : RecyclerView.Adapter<AllPageAdapter.BaseViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewTypee) {
-        0 -> ImageViewHolder(
-            layoutInflater.inflate(
-                R.layout.post_page_text_image,
-                parent,
-                false
-            )
-        )
-        2 -> UrlViewHolder(
-            layoutInflater.inflate(
-                R.layout.post_page_text_image_url,
-                parent,
-                false
-            )
-        )
-        1 -> VideoViewHolder(
-            layoutInflater.inflate(
-                R.layout.post_page_text_video,
-                parent,
-                false
-            )
-        )
+        0 -> ImageViewHolder(layoutInflater.inflate(R.layout.post_page_text_image, parent, false))
+        2 -> UrlViewHolder(layoutInflater.inflate(R.layout.post_page_text_image_url, parent, false))
+        1 -> VideoViewHolder(layoutInflater.inflate(R.layout.post_page_text_video, parent, false))
         else -> throw IllegalArgumentException("undefined viewType")
     }
 
@@ -67,7 +49,6 @@ class AllPageAdapter : RecyclerView.Adapter<AllPageAdapter.BaseViewHolder>() {
         private var textViewStatus: TextView
         private var textViewLike: TextView
         private var textViewLikeCount: TextView
-        private var statusLongTextView: TextView
         private var comment: TextView
         private var commentCount: TextView
         private var imageViewPost: ImageView
@@ -79,17 +60,15 @@ class AllPageAdapter : RecyclerView.Adapter<AllPageAdapter.BaseViewHolder>() {
             imageViewPost = itemView.findViewById(R.id.imageView_post)
             textViewLike = itemView.findViewById(R.id.TextView_like)
             textViewLikeCount = itemView.findViewById(R.id.TextView_Like_Count)
-            statusLongTextView = itemView.findViewById(R.id.Status_long_TextView)
             comment = itemView.findViewById(R.id.TextView_comment)
             commentCount = itemView.findViewById(R.id.TextView_comment_Count)
 
         }
 
         override fun bind(status: PostAllParameters) {
-            textViewStatus.text = status.status
+            textViewStatus.text = status.status.substring(0,46)
             textViewStatus.setOnClickListener {
-                textViewStatus.text = ""
-                statusLongTextView.text = status.status
+                textViewStatus.text = status.status
             }
 
             Glide.with(itemView.context)
@@ -134,6 +113,8 @@ class AllPageAdapter : RecyclerView.Adapter<AllPageAdapter.BaseViewHolder>() {
         private var comment: TextView
         private var commentCount: TextView
         private var count: Int = 0
+        private var countComment: Int = 0
+
 
         private val mediaController = MediaController(itemView.context)
 
@@ -162,7 +143,7 @@ class AllPageAdapter : RecyclerView.Adapter<AllPageAdapter.BaseViewHolder>() {
                 val builder = Dialog(itemView.context)
                 builder.apply {
                     count += 1
-                    commentCount.text = count.toString()
+                    commentCount.text = countComment.toString()
                     setContentView(R.layout.add_comment_page)
                     builder.show()
                 }
@@ -175,12 +156,13 @@ class AllPageAdapter : RecyclerView.Adapter<AllPageAdapter.BaseViewHolder>() {
         private var textUrlTextView: TextView
         private var textViewLike: TextView
         private var textViewLikeCount: TextView
-        private var statusLongTextView: TextView
         private var comment: TextView
         private var commentCount: TextView
         private var imageViewPost: ImageView
         private var webViewUrl: WebView
         private var count: Int = 0
+        private var countComment: Int = 0
+
 
         init {
             textViewStatus = itemView.findViewById(R.id.Status_TextView)
@@ -189,16 +171,15 @@ class AllPageAdapter : RecyclerView.Adapter<AllPageAdapter.BaseViewHolder>() {
             webViewUrl = itemView.findViewById(R.id.webView_URL)
             textViewLike = itemView.findViewById(R.id.TextView_like)
             textViewLikeCount = itemView.findViewById(R.id.TextView_Like_Count)
-            statusLongTextView = itemView.findViewById(R.id.Status_long_TextView)
             comment = itemView.findViewById(R.id.TextView_comment)
             commentCount = itemView.findViewById(R.id.TextView_comment_Count)
         }
 
         override fun bind(status: PostAllParameters) {
-            textViewStatus.text = status.status
+            textViewStatus.text = status.status.substring(0,46)
             textViewStatus.setOnClickListener {
-                textViewStatus.text = ""
-                statusLongTextView.text = status.status
+                textViewStatus.text = status.status
+
             }
 
             Glide.with(itemView.context)
@@ -231,7 +212,7 @@ class AllPageAdapter : RecyclerView.Adapter<AllPageAdapter.BaseViewHolder>() {
                 val builder = Dialog(itemView.context)
                 builder.apply {
                     count += 1
-                    commentCount.text = count.toString()
+                    commentCount.text = countComment.toString()
                     setContentView(R.layout.add_comment_page)
                     builder.show()
                 }

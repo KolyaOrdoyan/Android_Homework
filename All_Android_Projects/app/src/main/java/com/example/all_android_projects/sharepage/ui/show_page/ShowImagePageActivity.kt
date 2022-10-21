@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.all_android_projects.R
-import com.example.all_android_projects.sharepage.ui.adapter.AllPageAdapter
+import com.example.all_android_projects.sharepage.ui.adapter.AllShowPageAdapter
 
 class ShowImagePageActivity : AppCompatActivity() {
 
@@ -16,7 +16,7 @@ class ShowImagePageActivity : AppCompatActivity() {
         setContentView(R.layout.activity_show_page)
 
         recyclerView = findViewById(R.id.show_image_page_recycleView)
-        val allAdapter = AllPageAdapter()
+        val allAdapter = AllShowPageAdapter()
 
         recyclerView.apply {
             layoutManager = LinearLayoutManager(this@ShowImagePageActivity)

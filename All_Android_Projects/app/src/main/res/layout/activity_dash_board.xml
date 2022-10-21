@@ -93,9 +93,22 @@
         android:text="@string/list_page"
         android:textColor="#181818"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/menu_variety"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Lesson" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/menu_variety"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_button_style"
+        android:text="@string/menu_variety"
+        android:textColor="#181818"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/list_page"
+        app:layout_constraintTop_toTopOf="@+id/list_page" />
 
     <RadioGroup
         android:id="@+id/radioGroup"

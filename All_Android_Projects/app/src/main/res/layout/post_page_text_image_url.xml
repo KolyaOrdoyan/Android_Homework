@@ -13,21 +13,11 @@
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
         android:ellipsize="end"
-        android:maxLines="1"
         android:text=""
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/Status_long_TextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text=""
-        android:textColor="@color/white"
-        android:textSize="16sp"/>
 
     <ImageView
         android:id="@+id/imageView_post"

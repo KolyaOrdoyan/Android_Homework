@@ -2,7 +2,7 @@ package com.example.all_android_projects.sharepage.data
 
 enum class PostAllParameters(val status: String, val image: String, val vebViewUrl: String, val videoUrl: String) {
     STATUS_ONE(
-        "Hello World",
+        "«Hello, world!» — программа, результатом работы которой является вывод на экран или иное устройство фразы «Hello, world!»",
         "https://helloworld.gr/share-image.jpg",
         "https://ru.wikipedia.org/wiki/Hello,_world!",
         "https://archive.org/download/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4"
@@ -14,7 +14,7 @@ enum class PostAllParameters(val status: String, val image: String, val vebViewU
         "https://www.youtube.com/watch?v=rcGirrPli-Y.mp4"
     ),
     STATUS_THREE(
-        "Имеет наглость выглядеть героем». В Пентагоне удивились отказу Маска платить за Starlink на Украине",
+        "Имеет наглость выглядеть героем. В Пентагоне удивились отказу Маска платить за Starlink на Украине",
         "https://img.gazeta.ru/files3/919/15621919/AP20178615076377-pic4_zoom-1500x1500-45658.jpg",
         "https://www.gazeta.ru/tech/2022/10/14/15621823.shtml?updated",
         "https://img.gazeta.ru/files3/919/15621919/AP20178615076377-pic4_zoom-1500x1500-45658.jpg"
