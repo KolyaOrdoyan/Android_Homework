@@ -6,4 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".menuvariety.ui.menues.OptionsMenuActivity">
 
+    <ImageView
+        android:id="@+id/options_menu_imageView"
+        android:layout_width="400dp"
+        android:layout_height="380dp"
+        android:foregroundGravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/options_menu_textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/options_menu_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:text="Hi"
+        app:layout_constraintTop_toBottomOf="@+id/options_menu_imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

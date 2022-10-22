@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/popup_menu_image1"
+        android:title="image Animal"
+        />
+    <item android:id="@+id/popup_menu_image2"
+        android:title="image Car"
+        />
+    <item android:id="@+id/popup_menu_image3"
+        android:title="image Country"
+        />
+</menu>

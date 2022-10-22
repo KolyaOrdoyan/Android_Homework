@@ -6,4 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".menuvariety.ui.menues.PopupMenuActivity">
 
+    <ImageView
+        android:id="@+id/popup_menu_imageView"
+        android:layout_width="400dp"
+        android:layout_height="380dp"
+        android:foregroundGravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/popup_menu_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_button_style"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textAllCaps="false"
+        android:text="Create image"
+        app:layout_constraintTop_toBottomOf="@+id/popup_menu_imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
