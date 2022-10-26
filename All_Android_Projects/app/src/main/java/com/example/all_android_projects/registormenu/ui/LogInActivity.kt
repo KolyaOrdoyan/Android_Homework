@@ -4,10 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
-import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
 import com.example.all_android_projects.R
-import com.example.all_android_projects.lesson.LessonActivity
 import com.example.all_android_projects.registormenu.WelcomePageActivity
 
 class LogInActivity : AppCompatActivity() {
