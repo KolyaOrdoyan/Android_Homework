@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.all_android_projects" >
+    package="com.example.all_android_projects">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -14,23 +14,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat"
-        tools:targetApi="31" >
+        tools:targetApi="31">
+        <activity
+            android:name=".registormenu.ui.SignUpActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".registormenu.ui.LogInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".registormenu.WelcomePageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".lesson.LessonActivity"
+            android:exported="false" />
         <activity
             android:name=".menuvariety.ui.menues.ContextMenuActivity"
-            android:exported="false" >
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".menuvariety.ui.pickers.AlertDialogActivity"
-            android:exported="false" >
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".menuvariety.ui.pickers.DataPickerActivity"
-            android:exported="false" >
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".menuvariety.ui.menues.PopupMenuActivity"
-            android:exported="false" >
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".menuvariety.ui.pickers.TimePickerActivity"
             android:exported="false" />
@@ -62,9 +71,6 @@
             android:name=".country.ui.CountryListActivity"
             android:exported="false" />
         <activity
-            android:name=".lesson.LessonActivity"
-            android:exported="false" />
-        <activity
             android:name=".tictactoe.endpage.TicTacToeEndPageActivity"
             android:exported="false" />
         <activity
@@ -83,7 +89,7 @@
 
         <activity
             android:name=".DashBoardActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -5,11 +5,9 @@ import android.os.Bundle
 import com.example.all_android_projects.R
 
 class LessonActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lessone)
-
-
-
     }
 }
