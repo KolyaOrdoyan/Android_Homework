@@ -4,7 +4,7 @@
     android:id="@+id/linerLayout_LogInDialog"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/lesson_log_button"
+    android:background="@drawable/shape_blue_light_button"
     android:orientation="vertical">
 
     <TextView

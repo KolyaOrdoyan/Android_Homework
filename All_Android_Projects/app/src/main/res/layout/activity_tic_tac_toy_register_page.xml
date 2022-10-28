@@ -26,7 +26,7 @@
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginTop="84dp"
-        android:src="@drawable/tictactoe_image_x"
+        android:src="@drawable/image_tictactoe_x"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -48,7 +48,7 @@
         android:id="@+id/imageView1"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:src="@drawable/tictactoe_image_o"
+        android:src="@drawable/image_tictactoe_o"
         app:layout_constraintEnd_toStartOf="@+id/player2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -73,7 +73,7 @@
         android:layout_marginTop="52dp"
         android:text="Start game"
         android:textColor="@color/white"
-        android:background="@drawable/tictactoy_startbutton"
+        android:background="@drawable/shape_blue_light_button"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

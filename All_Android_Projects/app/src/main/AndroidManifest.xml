@@ -16,14 +16,14 @@
         android:theme="@style/Theme.AppCompat"
         tools:targetApi="31">
         <activity
-            android:name=".registormenu.ui.SignUpActivity"
+            android:name=".registermenu.signup.SignUpActivity"
             android:exported="false">
         </activity>
         <activity
-            android:name=".registormenu.ui.LogInActivity"
+            android:name=".registermenu.login.LogInActivity"
             android:exported="false" />
         <activity
-            android:name=".registormenu.WelcomePageActivity"
+            android:name=".registermenu.WelcomePageActivity"
             android:exported="false" />
         <activity
             android:name=".lesson.LessonActivity"

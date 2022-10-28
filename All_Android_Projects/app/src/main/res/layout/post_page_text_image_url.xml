@@ -55,13 +55,13 @@
             android:id="@+id/imageView_like"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/ic_like_blue" />
+            android:src="@drawable/icon_like_blue" />
 
         <TextView
             android:id="@+id/TextView_like"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="6dp"
             android:text="@string/like"
             android:textColor="@color/white"
             android:textSize="20sp" />
@@ -70,7 +70,7 @@
             android:id="@+id/TextView_Like_Count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="6dp"
             android:text=""
             android:textColor="@color/white"
             android:textSize="20sp" />
@@ -79,14 +79,14 @@
             android:id="@+id/imageView_comment"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginStart="5dp"
-            android:src="@drawable/ic_comment" />
+            android:layout_marginStart="6dp"
+            android:src="@drawable/icon_comment" />
 
         <TextView
             android:id="@+id/TextView_comment"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="6dp"
             android:text="@string/comment"
             android:textColor="@color/white"
             android:textSize="20sp" />
@@ -95,7 +95,7 @@
             android:id="@+id/TextView_comment_Count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="6dp"
             android:text=""
             android:textColor="@color/white"
             android:textSize="20sp" />
@@ -104,14 +104,14 @@
             android:id="@+id/imageView_share"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginStart="5dp"
-            android:src="@drawable/ic_share" />
+            android:layout_marginStart="6dp"
+            android:src="@drawable/icon_share" />
 
         <TextView
             android:id="@+id/TextView_share"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="6dp"
             android:text="@string/share"
             android:textColor="@color/white"
             android:textSize="20sp" />

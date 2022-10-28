@@ -20,7 +20,7 @@
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:gravity">center</item>
-        <item name="android:background">@drawable/calculator_black_button</item>
+        <item name="android:background">@drawable/shape_black_button</item>
     </style>
 
     <style name="numberColor">
@@ -28,8 +28,24 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/black</item>
-        <item name="android:background">@drawable/calculator_white_numbers_button</item>
+        <item name="android:background">@drawable/shape_white_button</item>
         <item name="android:gravity">center</item>
+    </style>
+
+
+    <style name="registerTextViewStyle">
+        <item name="android:gravity">start</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="registerEdithTextStyle">
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="maxLines">1</item>
+        <item name="background">@color/dark_purple</item>
     </style>
 
 </resources>

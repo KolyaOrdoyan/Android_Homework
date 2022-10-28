@@ -43,51 +43,59 @@ class AllShowPageAdapter : RecyclerView.Adapter<AllShowPageAdapter.BaseViewHolde
 
     abstract inner class BaseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        abstract fun bind(status: PostAllParameters)
-        abstract fun likeClick(view: View, likeCountView: TextView): TextView
-        abstract fun commentClick(view: View, commentCountView: TextView)
-    }
-
-    inner class ImageViewHolder(itemView: View) : BaseViewHolder(itemView) {
-
-        private var textViewStatus: TextView
         private var textViewLike: TextView
         private var textViewLikeCount: TextView
         private var comment: TextView
-        private var imageViewPost: ImageView
-        private var countComment: Int = 0
         private var commentCountTextView: TextView
 
+        abstract fun bind(status: PostAllParameters)
+        abstract fun likeClick(): TextView
+        abstract fun commentClick(): TextView
+
         init {
-            textViewStatus = itemView.findViewById(R.id.Status_TextView)
-            imageViewPost = itemView.findViewById(R.id.imageView_post)
             textViewLike = itemView.findViewById(R.id.TextView_like)
             textViewLikeCount = itemView.findViewById(R.id.TextView_Like_Count)
             comment = itemView.findViewById(R.id.TextView_comment)
             commentCountTextView = itemView.findViewById(R.id.TextView_comment_Count)
 
-        }
-
-        override fun likeClick(view: View, likeCountView: TextView): TextView {
-            var count = 0
-            textViewLike.setOnClickListener {
-                count += 1
-                textViewLikeCount.text = count.toString()
-            }
-            return textViewLikeCount
-        }
-
-        override fun commentClick(view: View, commentCountView: TextView) {
-            comment.setOnClickListener {
-                val builder = Dialog(itemView.context)
-                builder.apply {
-                    countComment += 1
-                    commentCountTextView.text = countComment.toString()
-                    setContentView(R.layout.add_comment_page)
-                    builder.show()
+            this.likeClick().setOnClickListener {
+                var count = 0
+                textViewLike.setOnClickListener {
+                    count += 1
+                    textViewLikeCount.text = count.toString()
                 }
             }
+
+            this.commentClick().setOnClickListener {
+                var count = 0
+                comment.setOnClickListener {
+                    val builder = Dialog(itemView.context)
+                    builder.apply {
+                        count += 1
+                        commentCountTextView.text = count.toString()
+                        setContentView(R.layout.add_comment_page)
+                        builder.show()
+                    }
+                }
+            }
+
         }
+
+    }
+
+    inner class ImageViewHolder(itemView: View) : BaseViewHolder(itemView) {
+
+        private var textViewStatus: TextView
+        private var imageViewPost: ImageView
+
+        init {
+            textViewStatus = itemView.findViewById(R.id.Status_TextView)
+            imageViewPost = itemView.findViewById(R.id.imageView_post)
+        }
+
+        override fun likeClick(): TextView = itemView.findViewById(R.id.TextView_like)
+
+        override fun commentClick(): TextView = itemView.findViewById(R.id.TextView_comment)
 
         override fun bind(status: PostAllParameters) {
             textViewStatus.text = status.status.substring(0, 46)
@@ -111,38 +119,28 @@ class AllShowPageAdapter : RecyclerView.Adapter<AllShowPageAdapter.BaseViewHolde
                 Glide.with(itemView.context).load(status.image).centerCrop()
                     .into(builder.findViewById(R.id.news_image))
             }
-//            textViewLike.setOnClickListener {
-//                countLike += 1
-//                textViewLikeCount.text = countLike.toString()
-//            }
+
         }
+
     }
 
     inner class VideoViewHolder(itemView: View) : BaseViewHolder(itemView) {
 
         private var textViewStatus: TextView
-        private var textViewLike: TextView
-        private var textViewLikeCount: TextView
-        private var comment: TextView
         private var imageViewPost: ImageView
-        private var countComment: Int = 0
-        private var commentCountTextView: TextView
         private var videoViewPost: VideoView
-
         private val mediaController = MediaController(itemView.context)
 
         init {
             textViewStatus = itemView.findViewById(R.id.Status_TextView)
             imageViewPost = itemView.findViewById(R.id.imageView_post)
-            textViewLike = itemView.findViewById(R.id.TextView_like)
-            textViewLikeCount = itemView.findViewById(R.id.TextView_Like_Count)
-            comment = itemView.findViewById(R.id.TextView_comment)
-            commentCountTextView = itemView.findViewById(R.id.TextView_comment_Count)
             videoViewPost = itemView.findViewById(R.id.VideoView_post)
-
             mediaController.setAnchorView(videoViewPost)
         }
 
+        override fun likeClick(): TextView = itemView.findViewById(R.id.TextView_like)
+
+        override fun commentClick(): TextView = itemView.findViewById(R.id.TextView_comment)
 
         override fun bind(status: PostAllParameters) {
             textViewStatus.text = status.status
@@ -150,52 +148,26 @@ class AllShowPageAdapter : RecyclerView.Adapter<AllShowPageAdapter.BaseViewHolde
             videoViewPost.setVideoURI(onLineUri)
         }
 
-        override fun likeClick(view: View, likeCountView: TextView): TextView {
-            var count = 0
-            textViewLike.setOnClickListener {
-                count += 1
-                textViewLikeCount.text = count.toString()
-            }
-            return textViewLikeCount
-        }
-
-        override fun commentClick(view: View, commentCountView: TextView) {
-            comment.setOnClickListener {
-                val builder = Dialog(itemView.context)
-                builder.apply {
-                    countComment += 1
-                    commentCountTextView.text = countComment.toString()
-                    setContentView(R.layout.add_comment_page)
-                    builder.show()
-                }
-            }
-        }
-
     }
 
     inner class UrlViewHolder(itemView: View) : BaseViewHolder(itemView) {
 
         private var textViewStatus: TextView
-        private var textViewLike: TextView
-        private var textViewLikeCount: TextView
-        private var comment: TextView
         private var imageViewPost: ImageView
-        private var countComment: Int = 0
-        private var commentCountTextView: TextView
         private var webViewUrl: WebView
         private var textUrlTextView: TextView
 
         init {
             textViewStatus = itemView.findViewById(R.id.Status_TextView)
             imageViewPost = itemView.findViewById(R.id.imageView_post)
-            textViewLike = itemView.findViewById(R.id.TextView_like)
-            textViewLikeCount = itemView.findViewById(R.id.TextView_Like_Count)
-            comment = itemView.findViewById(R.id.TextView_comment)
             textUrlTextView = itemView.findViewById(R.id.text_url)
-            commentCountTextView = itemView.findViewById(R.id.TextView_comment_Count)
             webViewUrl = itemView.findViewById(R.id.webView_URL)
-
         }
+
+        override fun likeClick(): TextView = itemView.findViewById(R.id.TextView_like)
+
+        override fun commentClick(): TextView = itemView.findViewById(R.id.TextView_comment)
+
 
         override fun bind(status: PostAllParameters) {
             textViewStatus.text = status.status.substring(0, 46)
@@ -214,13 +186,6 @@ class AllShowPageAdapter : RecyclerView.Adapter<AllShowPageAdapter.BaseViewHolde
                 webViewUrl.loadUrl(status.vebViewUrl)
             }
 
-//            likeClick(textViewLike, textViewLikeCount)
-
-//            textViewLike.setOnClickListener {
-//                count += 1
-//                textViewLikeCount.text = count.toString()
-//            }
-
             imageViewPost.setOnClickListener {
                 val builder = Dialog(itemView.context)
                 builder.apply {
@@ -231,27 +196,9 @@ class AllShowPageAdapter : RecyclerView.Adapter<AllShowPageAdapter.BaseViewHolde
                 Glide.with(itemView.context).load(status.image).centerCrop()
                     .into(builder.findViewById(R.id.news_image))
             }
+
         }
 
-        override fun likeClick(view: View, likeCountView: TextView): TextView {
-            var count = 0
-            textViewLike.setOnClickListener {
-                count += 1
-                textViewLikeCount.text = count.toString()
-            }
-            return textViewLike
-        }
-
-        override fun commentClick(view: View, commentCountView: TextView) {
-            comment.setOnClickListener {
-                val builder = Dialog(itemView.context)
-                builder.apply {
-                    countComment += 1
-                    commentCountTextView.text = countComment.toString()
-                    setContentView(R.layout.add_comment_page)
-                    builder.show()
-                }
-            }
-        }
     }
+
 }

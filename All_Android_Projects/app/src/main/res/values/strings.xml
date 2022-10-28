@@ -1,6 +1,6 @@
 <resources>
+    <!--dash bord activity-->
     <string name="app_name">All_Android_Projects</string>
-
     <string name="welcome_to_kolya_projects">Welcome to Kolya projects</string>
     <string name="pleas_choose_one_of_these">Pleas choose one of these</string>
     <string name="calculator">Calculator</string>
@@ -10,12 +10,12 @@
     <string name="list_page">List Page</string>
     <string name="menu_variety">menu variety</string>
 
-
     <string name="do_you_like_this_style">Do you like this style?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <!--dash bord activity end-->
 
-
+    <!--share page -->
     <string name="welcome_to_program_pleas_choose_type_for_list">Welcome to program pleas choose type for list</string>
     <string name="image">image</string>
     <string name="status">status</string>
@@ -28,12 +28,24 @@
     <string name="like">Like</string>
     <string name="add">add</string>
     <string name="cancel">cancel</string>
+    <!--share page end-->
 
+    <!--menu variety-->
     <string name="alertdialog">AlertDialog</string>
     <string name="date_picker">date picker</string>
     <string name="timepicker">Time Picker</string>
     <string name="options_menu">Options Menu</string>
     <string name="context_menu">Context Menu</string>
     <string name="popup_menu">Popup Menu</string>
+    <!--menu variety end-->
 
+    <!--register menu-->
+    <string name="email_or_phone_number">Email or phone number</string>
+    <string name="data_me">Data me.</string>
+    <string name="know_yourself_better">Know yourself better</string>
+    <string name="sign_up">Sign up</string>
+    <string name="name_or_pseudo">Name or Pseudo</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="password">Password</string>
+    <!--register menu end-->
 </resources>

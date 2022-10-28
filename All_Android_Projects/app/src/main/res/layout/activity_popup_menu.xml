@@ -19,7 +19,7 @@
         android:id="@+id/popup_menu_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/main_button_style"
+        android:background="@drawable/shape_whigt_main_button"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textAllCaps="false"

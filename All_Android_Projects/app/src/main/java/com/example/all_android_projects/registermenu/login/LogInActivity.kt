@@ -1,4 +1,4 @@
-package com.example.all_android_projects.registormenu.ui
+package com.example.all_android_projects.registermenu.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.EditText
 import androidx.appcompat.widget.AppCompatButton
 import com.example.all_android_projects.R
-import com.example.all_android_projects.registormenu.WelcomePageActivity
+import com.example.all_android_projects.registermenu.WelcomePageActivity
 
 class LogInActivity : AppCompatActivity() {
 

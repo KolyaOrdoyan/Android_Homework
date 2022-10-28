@@ -9,7 +9,7 @@ import com.example.all_android_projects.calculator.CalculatorActivity
 import com.example.all_android_projects.country.ui.CountryListActivity
 import com.example.all_android_projects.lesson.LessonActivity
 import com.example.all_android_projects.menuvariety.MenuVarietyActivity
-import com.example.all_android_projects.registormenu.WelcomePageActivity
+import com.example.all_android_projects.registermenu.WelcomePageActivity
 import com.example.all_android_projects.sharepage.ui.ChooseTypeActivity
 import com.example.all_android_projects.tictactoe.TicTacToyRegisterPageActivity
 

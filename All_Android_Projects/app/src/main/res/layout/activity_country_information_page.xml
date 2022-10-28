@@ -26,7 +26,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
-                android:src="@drawable/tictactoe_image_x" />
+                android:src="@drawable/image_tictactoe_x" />
 
 
         </LinearLayout>
@@ -65,7 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:background="@drawable/country_text_view"
+                android:background="@drawable/shape_grey_dark_textview"
                 android:minHeight="60dp"
                 android:padding="5dp"
                 android:text="information"
