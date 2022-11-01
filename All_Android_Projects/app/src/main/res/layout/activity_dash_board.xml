@@ -35,64 +35,53 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Calculator"
+        style="@style/dashBoardDarkBlueButtonsStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_whigt_main_button"
+        android:layout_marginTop="48dp"
         android:text="@string/calculator"
-        android:textColor="#181818"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/TicTacToy"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.23" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/TicTacToy"
+        style="@style/dashBoardDarkBlueButtonsStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_whigt_main_button"
         android:text="@string/tic_tac_toy"
-        android:textColor="#181818"
-        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/Calculator"
         app:layout_constraintTop_toTopOf="@+id/Calculator" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Lesson"
+        style="@style/dashBoardDarkBlueButtonsStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:background="@drawable/shape_whigt_main_button"
         android:text="@string/lesson"
-        android:textColor="#181818"
-        android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/Country"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Calculator" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Country"
+        style="@style/dashBoardDarkBlueButtonsStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_whigt_main_button"
         android:text="@string/country"
-        android:textColor="#181818"
-        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/Lesson"
         app:layout_constraintTop_toTopOf="@+id/Lesson" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/list_page"
+        style="@style/dashBoardDarkBlueButtonsStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:background="@drawable/shape_whigt_main_button"
         android:text="@string/list_page"
-        android:textColor="#181818"
-        android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/menu_variety"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Lesson" />
@@ -100,28 +89,35 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/menu_variety"
+        style="@style/dashBoardDarkBlueButtonsStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_whigt_main_button"
         android:text="@string/menu_variety"
-        android:textColor="#181818"
-        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/list_page"
         app:layout_constraintTop_toTopOf="@+id/list_page" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/register_page"
+        style="@style/dashBoardDarkBlueButtonsStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_whigt_main_button"
+        android:layout_marginTop="48dp"
         android:text="register page"
-        android:textColor="#181818"
-        android:textSize="16sp"
-         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/store"
+        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_page" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/store"
+        style="@style/dashBoardDarkBlueButtonsStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/store"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/list_page"/>
+        app:layout_constraintStart_toEndOf="@+id/register_page"
+        app:layout_constraintTop_toTopOf="@+id/register_page" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -138,7 +134,6 @@
             android:text="@string/do_you_like_this_style"
             android:textColor="@color/white"
             android:textSize="20sp" />
-
 
         <RadioButton
             android:id="@+id/radioButtonYes"
@@ -165,6 +160,5 @@
             app:layout_constraintStart_toStartOf="parent" />
 
     </RadioGroup>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

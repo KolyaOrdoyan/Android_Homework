@@ -89,7 +89,7 @@
         android:id="@+id/proceed_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_whigt_main_button"
+        android:background="@drawable/shape_main_button_blue"
         android:text="@string/proceed"
         android:textColor="@color/black"
         android:textSize="24sp"

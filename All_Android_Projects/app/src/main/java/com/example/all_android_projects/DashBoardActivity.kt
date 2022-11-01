@@ -11,6 +11,7 @@ import com.example.all_android_projects.lesson.LessonActivity
 import com.example.all_android_projects.menuvariety.MenuVarietyActivity
 import com.example.all_android_projects.registermenu.WelcomePageActivity
 import com.example.all_android_projects.sharepage.ui.ChooseTypeActivity
+import com.example.all_android_projects.store.StoreActivity
 import com.example.all_android_projects.tictactoe.TicTacToyRegisterPageActivity
 
 class DashBoardActivity : AppCompatActivity() {
@@ -22,6 +23,7 @@ class DashBoardActivity : AppCompatActivity() {
     private lateinit var buttonListPage: AppCompatButton
     private lateinit var buttonMenuVariety: AppCompatButton
     private lateinit var buttonWelcomePage: AppCompatButton
+    private lateinit var buttonStore: AppCompatButton
     private lateinit var radiobuttonyes: RadioButton
     private lateinit var radiobuttonno: RadioButton
 
@@ -37,6 +39,7 @@ class DashBoardActivity : AppCompatActivity() {
         buttonListPage = findViewById(R.id.list_page)
         buttonMenuVariety = findViewById(R.id.menu_variety)
         buttonWelcomePage = findViewById(R.id.register_page)
+        buttonStore = findViewById(R.id.store)
         radiobuttonyes = findViewById(R.id.radioButtonYes)
         radiobuttonno = findViewById(R.id.radioButtonNo)
 
@@ -47,38 +50,28 @@ class DashBoardActivity : AppCompatActivity() {
     private fun buttonClick() {
 
         buttoncalculator.setOnClickListener() {
-
             val intent = Intent(this, CalculatorActivity::class.java)
             startActivity(intent)
-
         }
 
         buttontictactoy.setOnClickListener() {
-
             val intent = Intent(this, TicTacToyRegisterPageActivity::class.java)
             startActivity(intent)
-
         }
 
         buttonlesson.setOnClickListener() {
-
             val intent = Intent(this, LessonActivity::class.java)
             startActivity(intent)
-
         }
 
         buttoncountry.setOnClickListener {
-
             val intent = Intent(this, CountryListActivity::class.java)
             startActivity(intent)
-
         }
 
         buttonListPage.setOnClickListener {
-
             val intent = Intent(this, ChooseTypeActivity::class.java)
             startActivity(intent)
-
         }
 
         buttonMenuVariety.setOnClickListener {
@@ -90,8 +83,11 @@ class DashBoardActivity : AppCompatActivity() {
             val intent = Intent(this,WelcomePageActivity::class.java)
             startActivity(intent)
         }
+
+        buttonStore.setOnClickListener {
+            val intent = Intent(this, StoreActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 }
-
-

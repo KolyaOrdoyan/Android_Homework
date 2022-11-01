@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/sign_up_page_imageView"
+        android:id="@+id/log_in_page_imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
@@ -35,7 +35,7 @@
         android:background="@drawable/shape_background_colors"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 
     <TextView
@@ -53,7 +53,7 @@
     <EditText
         android:id="@+id/sign_up_page_email_editText"
         android:layout_width="255dp"
-        android:layout_height="40dp"
+        android:layout_height="45dp"
         style="@style/registerEdithTextStyle"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,7 +75,7 @@
     <EditText
         android:id="@+id/sign_up_page_password_editText"
         android:layout_width="255dp"
-        android:layout_height="40dp"
+        android:layout_height="45dp"
         style="@style/registerEdithTextStyle"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,7 +97,7 @@
     <EditText
         android:id="@+id/sign_up_page_confirm_pass_edithText"
         android:layout_width="255dp"
-        android:layout_height="40dp"
+        android:layout_height="45dp"
         style="@style/registerEdithTextStyle"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
@@ -118,7 +118,7 @@
     <EditText
         android:id="@+id/sign_up_page_name_or_pseudo_edithText"
         android:layout_width="255dp"
-        android:layout_height="40dp"
+        android:layout_height="45dp"
         style="@style/registerEdithTextStyle"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"

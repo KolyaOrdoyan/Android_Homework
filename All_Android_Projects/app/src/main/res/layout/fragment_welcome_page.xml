@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/welcome_page_fragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".registermenu.fragment.FragmentWelcomePage">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/lesson_imageView"
+            android:layout_width="169dp"
+            android:layout_height="136dp"
+            android:layout_marginTop="16dp"
+            android:src="@mipmap/image_for_homework"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lesson_textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/data_me"
+            android:textColor="#2e55f2"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lesson_imageView" />
+
+        <TextView
+            android:id="@+id/lesson_textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/know_yourself_better"
+            android:textColor="#2e55f2"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lesson_textView1" />
+
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="485dp"
+            android:layout_height="457dp"
+            android:background="@drawable/shape_background_colors"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/welcome_page_button_log"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="320dp"
+            android:background="@drawable/shape_blue_light_button"
+            android:text="@string/log_in"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/welcome_page_button_sign"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_terminate_button"
+            android:text="@string/sign_up"
+            android:textAllCaps="false"
+            android:textColor="#3a57cf"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/welcome_page_button_log" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

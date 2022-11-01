@@ -9,6 +9,7 @@
     <string name="country">Country</string>
     <string name="list_page">List Page</string>
     <string name="menu_variety">menu variety</string>
+    <string name="store">store</string>
 
     <string name="do_you_like_this_style">Do you like this style?</string>
     <string name="yes">Yes</string>
@@ -47,5 +48,8 @@
     <string name="name_or_pseudo">Name or Pseudo</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="password">Password</string>
+    <string name="log_in">Log In</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <!--register menu end-->
 </resources>

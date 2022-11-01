@@ -4,81 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fcfcfc"
     tools:context=".registermenu.WelcomePageActivity">
 
-
-    <ImageView
-        android:id="@+id/lesson_imageView"
-        android:layout_width="169dp"
-        android:layout_height="136dp"
-        android:layout_marginTop="16dp"
-        android:src="@mipmap/image_for_homework"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/lesson_textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="32sp"
-        android:text="@string/data_me"
-        android:layout_marginTop="24dp"
-        android:textColor="#2e55f2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lesson_imageView"
-        />
-
-    <TextView
-        android:id="@+id/lesson_textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="14sp"
-        android:text="@string/know_yourself_better"
-        android:textColor="#2e55f2"
-        app:layout_constraintTop_toBottomOf="@+id/lesson_textView1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
-
-
-    <ImageView
-        android:layout_width="485dp"
-        android:layout_height="457dp"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/shape_background_colors"
+    <FrameLayout
+        android:id="@+id/fragment_welcome_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lesson_textView2" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/welcome_page_button_log"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="324dp"
-        android:background="@drawable/shape_blue_light_button"
-        android:text="Log In"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lesson_textView2" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/welcome_page_button_sign"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:text="Sign Up"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/shape_terminate_button"
-        android:textAllCaps="false"
-        android:textColor="#3a57cf"
-        app:layout_constraintTop_toBottomOf="@id/welcome_page_button_log"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
