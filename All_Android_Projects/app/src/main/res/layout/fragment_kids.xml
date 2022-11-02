@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".store.fragmentapp.KidsFragment">
+
+<!--    <ImageView-->
+<!--        android:id="@+id/kids_image_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:src="@drawable/image_tictactoe_x"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/kids_text_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center"-->
+<!--        android:text="@string/everything_here_id_teacher_approved"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="32sp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/kids_image_view" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/kids_learn_more_button"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:background="@drawable/shape_kids_green_button"-->
+<!--        android:text="Learn more"-->
+<!--        android:textAllCaps="false"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/kids_text_view" />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_kids"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/top_charts_recycler_view"/>
+
+    <!--        app:layout_constraintTop_toBottomOf="@+id/kids_learn_more_button"-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
