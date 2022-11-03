@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.all_android_projects.R
 import com.example.all_android_projects.store.data.AppsInformationEnum
 
-class TopChartsAdapter : RecyclerView.Adapter<TopChartsAdapter.ViewHolder>() {
+class TopChartsGameAdapter  : RecyclerView.Adapter<TopChartsGameAdapter.ViewHolder>() {
     private val items = AppsInformationEnum.values()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
@@ -29,9 +29,9 @@ class TopChartsAdapter : RecyclerView.Adapter<TopChartsAdapter.ViewHolder>() {
 
         fun bind(apps: AppsInformationEnum) {
             position.text = apps.appPosition
-            appName.text = apps.appName
-            category.text = apps.appCategory
-            rating.text = apps.appRating
+            appName.text = apps.gameName
+            category.text = apps.gameCategory
+            rating.text = apps.gameRating
         }
 
         init {
@@ -41,4 +41,5 @@ class TopChartsAdapter : RecyclerView.Adapter<TopChartsAdapter.ViewHolder>() {
             position = itemView.findViewById(R.id.app_position_text_view)
         }
     }
+
 }

@@ -18,7 +18,7 @@ class StoreActivity : AppCompatActivity() {
 
         supportFragmentManager
             .beginTransaction()
-            .replace(R.id.store_frame_layout, AppFragment.newInstance()).commit()
+            .replace(R.id.store_frame_layout, GameFragment.newInstance()).commit()
 
         gameLayout = findViewById(R.id.store_liner_layout_game_pad)
         appLayout = findViewById(R.id.store_liner_layout_apps)

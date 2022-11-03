@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager.widget.ViewPager
 import com.example.all_android_projects.R
-import com.example.all_android_projects.store.adapter.MyViewPagerAdapter
+import com.example.all_android_projects.store.adapter.TopChartsViewPagerAdapter
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.fragment_app.view.*
 
@@ -24,7 +24,7 @@ class AppFragment : Fragment() {
         val viewPager: ViewPager = view.app_view_pager
         val table: TabLayout = view.app_fragment_table
 
-        val adapter = MyViewPagerAdapter(parentFragmentManager)
+        val adapter = TopChartsViewPagerAdapter(parentFragmentManager)
         adapter.addFragment(TopChartsFragment(), "top charts")
         adapter.addFragment(KidsFragment(), "Kids")
         adapter.addFragment(CategoriesFragment(), "Categories")
