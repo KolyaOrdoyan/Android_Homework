@@ -1,6 +1,6 @@
 @file:Suppress("DEPRECATION")
 
-package com.example.all_android_projects.store.adapter
+package com.example.all_android_projects.store.ui.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

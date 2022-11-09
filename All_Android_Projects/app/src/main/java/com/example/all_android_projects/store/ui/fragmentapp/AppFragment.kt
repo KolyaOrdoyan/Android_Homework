@@ -1,4 +1,4 @@
-package com.example.all_android_projects.store.fragmentapp
+package com.example.all_android_projects.store.ui.fragmentapp
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager.widget.ViewPager
 import com.example.all_android_projects.R
-import com.example.all_android_projects.store.adapter.TopChartsViewPagerAdapter
+import com.example.all_android_projects.store.ui.adapter.TopChartsViewPagerAdapter
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.fragment_app.view.*
 
@@ -25,9 +25,9 @@ class AppFragment : Fragment() {
         val table: TabLayout = view.app_fragment_table
 
         val adapter = TopChartsViewPagerAdapter(parentFragmentManager)
-        adapter.addFragment(TopChartsFragment(), "top charts")
+        adapter.addFragment(TopChartsAppFragment(), "top charts")
         adapter.addFragment(KidsFragment(), "Kids")
-        adapter.addFragment(CategoriesFragment(), "Categories")
+        adapter.addFragment(CategoryFragment(), "Categories")
 
         viewPager.adapter = adapter
         table.setupWithViewPager(viewPager)

@@ -4,8 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.LinearLayout
 import com.example.all_android_projects.R
-import com.example.all_android_projects.store.fragmentapp.AppFragment
-import com.example.all_android_projects.store.fragmentgame.GameFragment
+import com.example.all_android_projects.store.ui.fragmentapp.AppFragment
+import com.example.all_android_projects.store.ui.fragmentgame.GameFragment
 
 class StoreActivity : AppCompatActivity() {
 

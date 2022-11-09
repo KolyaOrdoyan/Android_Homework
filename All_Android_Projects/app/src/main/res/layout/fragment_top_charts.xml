@@ -4,31 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".store.fragmentapp.TopChartsFragment">
+    tools:context=".store.ui.fragmentapp.TopChartsAppFragment">
 
     <LinearLayout
         android:id="@+id/top_charts_button_sheet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="@dimen/_12dp"
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/top_charts_top_free_button"
-            android:layout_width="120dp"
+            android:layout_width="@dimen/_120dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
+            android:layout_marginStart="@dimen/_18dp"
             android:background="@drawable/shape_kids_green_button"
-            android:text="Top Free"
+            android:text="@string/top_free"
             android:textAllCaps="false" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="120dp"
+            android:id="@+id/top_charts_category_button"
+            android:layout_width="@dimen/_120dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="@dimen/_16dp"
             android:background="@drawable/shape_kids_green_button"
-            android:text="Category"
+            android:text="@string/category"
             android:textAllCaps="false" />
 
     </LinearLayout>
@@ -37,7 +38,7 @@
         android:id="@+id/recyclerView_top_charts"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="@dimen/_70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/top_charts_button_sheet"
         tools:listitem="@layout/top_charts_recycler_view" />

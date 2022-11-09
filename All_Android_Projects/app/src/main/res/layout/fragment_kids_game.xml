@@ -1,16 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".store.fragmentgame.KidsGameFragment">
+    tools:context=".store.ui.fragmentgame.KidsGameFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView_kids"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/top_charts_recycler_view"/>
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/image_view_kids_page"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_256dp"
+            android:src="@drawable/image_tictactoe_x"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_view_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/browse_by_age"
+            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/_8dp"
+            android:textSize="@dimen/_24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_view_kids_page" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_age">
+
+            <RadioButton
+                android:id="@+id/AgesRadioButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8dp"
+                android:text="@string/up_to_5"
+                tools:layout_editor_absoluteX="163dp"
+                tools:layout_editor_absoluteY="274dp" />
+
+            <RadioButton
+                android:id="@+id/AgesRadioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8dp"
+                android:text="@string/up_to_6_8"
+                tools:layout_editor_absoluteX="163dp"
+                tools:layout_editor_absoluteY="274dp" />
+
+            <RadioButton
+                android:id="@+id/AgesRadioButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8dp"
+                android:text="@string/up_to_9_12"
+                tools:layout_editor_absoluteX="163dp"
+                tools:layout_editor_absoluteY="274dp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:id="@+id/kids_page_for_you_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="for you"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_for_you"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/kids_page_for_you_text_view"
+            tools:listitem="@layout/kids_page" />
+
+        <TextView
+            android:id="@+id/offline_game_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="offline game"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_24sp"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_8dp"
+            app:layout_constraintTop_toBottomOf="@id/recyclerView_for_you" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_offline_games_kids"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/offline_game_text_view"
+            tools:listitem="@layout/kids_page" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

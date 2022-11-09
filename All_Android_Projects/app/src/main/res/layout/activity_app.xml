@@ -15,34 +15,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <FrameLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/store_frame_layout"
         android:layout_width="match_parent"
-        android:layout_height="600dp"
-        app:layout_constraintTop_toBottomOf="@+id/store_search_view"
-        />
+        android:layout_height="660dp"
+        app:layout_constraintTop_toBottomOf="@+id/store_search_view" />
 
     <LinearLayout
         android:id="@+id/store_liner_layout_game_pad"
         android:layout_width="200dp"
         android:layout_height="80dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center"
         android:orientation="vertical"
-        android:gravity="center">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:src="@drawable/ic_game_pad"/>
+            android:src="@drawable/ic_game_pad" />
 
         <TextView
-            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/games"
             android:textAllCaps="false"
-            android:textSize="16sp"
-            android:text="Games"/>
+            android:textSize="16sp" />
 
     </LinearLayout>
 
@@ -50,43 +49,25 @@
         android:id="@+id/store_liner_layout_apps"
         android:layout_width="200dp"
         android:layout_height="80dp"
-        app:layout_constraintTop_toTopOf="@+id/store_liner_layout_game_pad"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center"
         android:orientation="vertical"
-        android:gravity="center">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/store_liner_layout_game_pad">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:src="@drawable/ic_apps"/>
+            android:src="@drawable/ic_apps" />
 
         <TextView
-            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="16sp"
+            android:gravity="center"
+            android:text="@string/apps"
             android:textAllCaps="false"
-            android:text="Apps"/>
+            android:textSize="16sp" />
 
     </LinearLayout>
-
-<!--    <androidx.appcompat.widget.AppCompatButton-->
-<!--        android:id="@+id/store_game_button"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/store_app_button"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/store_frame_layout" />-->
-
-<!--    <androidx.appcompat.widget.AppCompatButton-->
-<!--        android:id="@+id/store_app_button"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/store_game_button"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/store_frame_layout" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

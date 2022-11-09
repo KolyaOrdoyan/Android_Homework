@@ -10,7 +10,6 @@
     <string name="list_page">List Page</string>
     <string name="menu_variety">menu variety</string>
     <string name="store">store</string>
-
     <string name="do_you_like_this_style">Do you like this style?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
@@ -23,7 +22,6 @@
     <string name="url">url</string>
     <string name="video">video</string>
     <string name="proceed">proceed</string>
-
     <string name="share">Share</string>
     <string name="comment">Comment</string>
     <string name="like">Like</string>
@@ -53,8 +51,20 @@
 
 
     <!--store page-->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="everything_here_id_teacher_approved">Everything here id Teacher Approved</string>
-
+    <string name="category">Category</string>
+    <string name="top_free">Top Free</string>
+    <string name="category_name">category name</string>
+    <string name="apps_name">App Name</string>
+    <string name="rating_mb">rating mb</string>
+    <string name="browse_by_age">browse by age</string>
+    <string name="up_to_5">up to 5</string>
+    <string name="up_to_6_8">up to 6 - 8</string>
+    <string name="up_to_9_12">up to 9 - 12</string>
+    <string name="rating">rating</string>
+    <string name="name">name</string>
+    <string name="casual_game">casual game</string>
+    <string name="offline_game">offline game</string>
+    <string name="apps">Apps</string>
+    <string name="games">Games</string>
     <!--store page end-->
 </resources>
