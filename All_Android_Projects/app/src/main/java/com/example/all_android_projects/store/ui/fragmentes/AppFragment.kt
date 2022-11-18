@@ -31,6 +31,7 @@ class AppFragment : Fragment() {
 
         viewPager.adapter = adapter
         table.setupWithViewPager(viewPager)
+
     }
 
     companion object {
