@@ -1,4 +1,4 @@
-package com.example.all_android_projects.store.ui.fragmentgame
+package com.example.all_android_projects.store.ui.fragmentes
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.all_android_projects.R
-import com.example.all_android_projects.store.ui.adapter.AllTopChartsAdapter
+import com.example.all_android_projects.store.ui.adapter.AllFragmentAdapter
 import kotlinx.android.synthetic.main.fragment_premium_game.view.*
 
 class PremiumGameFragment : Fragment() {
@@ -24,7 +24,7 @@ class PremiumGameFragment : Fragment() {
         val recyclerViewForYou = view.recyclerView_premium_games_for_you
         val recyclerViewOfflineGames = view.recyclerView_premium_offline_games
         val recyclerViewCasualGames = view.recyclerView_premium_casual_games
-        val allAdapter = AllTopChartsAdapter()
+        val allAdapter = AllFragmentAdapter()
 
         horizontalRecyclerView(recyclerViewForYou, allAdapter)
         horizontalRecyclerView(recyclerViewOfflineGames, allAdapter)
@@ -34,7 +34,7 @@ class PremiumGameFragment : Fragment() {
 
     private fun horizontalRecyclerView(
         recyclerView: RecyclerView,
-        customAdapter: AllTopChartsAdapter
+        customAdapter: AllFragmentAdapter
     ) {
         recyclerView.apply {
             layoutManager =

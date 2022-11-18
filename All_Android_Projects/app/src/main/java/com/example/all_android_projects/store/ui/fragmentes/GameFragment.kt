@@ -1,4 +1,4 @@
-package com.example.all_android_projects.store.ui.fragmentgame
+package com.example.all_android_projects.store.ui.fragmentes
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.viewpager.widget.ViewPager
 import com.example.all_android_projects.R
 import com.example.all_android_projects.store.ui.adapter.TopChartsViewPagerAdapter
-import com.example.all_android_projects.store.ui.fragmentapp.CategoryFragment
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.fragment_game.view.*
 
@@ -26,10 +25,12 @@ class GameFragment : Fragment() {
         val table: TabLayout = view.game_fragment_table
 
         val adapter = TopChartsViewPagerAdapter(parentFragmentManager)
-        adapter.addFragment(TopChartGameFragment(), "top charts")
-        adapter.addFragment(KidsGameFragment(), "Kids")
+        adapter.addFragment(TopChartsAppFragment(), "top charts")
+        adapter.addFragment(KidsFragment(), "Kids")
         adapter.addFragment(PremiumGameFragment(), "Premium")
-        adapter.addFragment(CategoryGameFragment(),"Category")
+        adapter.addFragment(CategoryFragment(),"Category")
+
+
 
         viewPager.adapter = adapter
         table.setupWithViewPager(viewPager)

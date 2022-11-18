@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.all_android_projects.R
 import com.example.all_android_projects.store.model.AppsInformationEnum
 
-class AllTopChartsAdapter : RecyclerView.Adapter<AllTopChartsAdapter.BaseViewHolder>() {
+class AllFragmentAdapter : RecyclerView.Adapter<AllFragmentAdapter.BaseViewHolder>() {
 
     var viewTypee: Int = 0
     private lateinit var context: Context
@@ -39,6 +39,18 @@ class AllTopChartsAdapter : RecyclerView.Adapter<AllTopChartsAdapter.BaseViewHol
         4 -> KidsApp(
             LayoutInflater.from(parent.context)
                 .inflate(R.layout.kids_page, parent, false)
+        )
+        5 -> KidsGame(
+            LayoutInflater.from(parent.context)
+                .inflate(R.layout.kids_page, parent, false)
+        )
+        6 -> CategoryApp(
+            LayoutInflater.from(parent.context)
+                .inflate(R.layout.category_view, parent, false)
+        )
+        7 -> CategoryGame(
+            LayoutInflater.from(parent.context)
+                .inflate(R.layout.category_view, parent, false)
         )
         else -> throw IllegalArgumentException("undefined viewType")
     }
@@ -95,7 +107,7 @@ class AllTopChartsAdapter : RecyclerView.Adapter<AllTopChartsAdapter.BaseViewHol
         }
     }
 
-    inner class PremiumGame(itemView: View) : BaseViewHolder(itemView){
+    inner class PremiumGame(itemView: View) : BaseViewHolder(itemView) {
         private var appName: TextView
         private var rating: TextView
 
@@ -110,7 +122,7 @@ class AllTopChartsAdapter : RecyclerView.Adapter<AllTopChartsAdapter.BaseViewHol
         }
     }
 
-    inner class KidsApp(itemView: View) : BaseViewHolder(itemView){
+    inner class KidsApp(itemView: View) : BaseViewHolder(itemView) {
         private var appName: TextView
         private var rating: TextView
 
@@ -125,4 +137,44 @@ class AllTopChartsAdapter : RecyclerView.Adapter<AllTopChartsAdapter.BaseViewHol
         }
     }
 
+    inner class KidsGame(itemView: View) : AllFragmentAdapter.BaseViewHolder(itemView) {
+        private var appName: TextView
+        private var rating: TextView
+        override fun bind(apps: AppsInformationEnum) {
+            appName.text = apps.gameName
+            rating.text = apps.gameRating
+        }
+
+        init {
+            appName = itemView.findViewById(R.id.app_name_text_view)
+            rating = itemView.findViewById(R.id.app_rating_text_view)
+        }
+    }
+
+    inner class CategoryApp(itemView: View) : AllFragmentAdapter.BaseViewHolder(itemView) {
+        var appsCategoryName: TextView
+
+        override fun bind(apps: AppsInformationEnum) {
+            appsCategoryName.text = apps.categoryNameApp
+        }
+
+        init {
+            appsCategoryName = itemView.findViewById(R.id.category_name_text_view)
+        }
+    }
+
+    inner class CategoryGame(itemView: View) : AllFragmentAdapter.BaseViewHolder(itemView) {
+        var appsCategoryName: TextView
+
+        override fun bind(apps: AppsInformationEnum) {
+            appsCategoryName.text = apps.categoryNameGame
+        }
+
+        init {
+            appsCategoryName = itemView.findViewById(R.id.category_name_text_view)
+        }
+    }
+
 }
+
+

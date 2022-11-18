@@ -66,5 +66,7 @@
     <string name="offline_game">offline game</string>
     <string name="apps">Apps</string>
     <string name="games">Games</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <!--store page end-->
 </resources>
