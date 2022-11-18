@@ -30,6 +30,7 @@ class AppFragment : Fragment() {
         adapter.addFragment(CategoryFragment(), "Categories")
 
         viewPager.adapter = adapter
+
         table.setupWithViewPager(viewPager)
     }
 
