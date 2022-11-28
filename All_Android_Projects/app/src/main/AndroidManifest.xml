@@ -17,6 +17,10 @@
         android:theme="@style/all_android_projects"
         tools:targetApi="31">
         <activity
+            android:name=".api.ui.ApiMainActivity"
+            android:exported="false">
+        </activity>
+        <activity
             android:name=".store.StoreActivity"
             android:exported="false" />
         <activity

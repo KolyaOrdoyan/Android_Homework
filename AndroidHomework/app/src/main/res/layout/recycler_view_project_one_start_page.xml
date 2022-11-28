@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/line_one_text_view_start_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/startPageTextViewStyle"
+        android:text="line one"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/line_two_text_view_start_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/startPageTextViewStyle"
+        android:text="line two"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_one_text_view_start_page"/>
+
+    <TextView
+        android:id="@+id/line_three_text_view_start_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/startPageTextViewStyle"
+        android:text="line three"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_two_text_view_start_page"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,6 +10,7 @@
     <string name="list_page">List Page</string>
     <string name="menu_variety">menu variety</string>
     <string name="store">store</string>
+    <string name="api">API</string>
     <string name="do_you_like_this_style">Do you like this style?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
@@ -58,8 +59,8 @@
     <string name="rating_mb">rating mb</string>
     <string name="browse_by_age">browse by age</string>
     <string name="up_to_5">up to 5</string>
-    <string name="up_to_6_8">up to 6 - 8</string>
-    <string name="up_to_9_12">up to 9 - 12</string>
+    <string name="up_to_6_8">up to 6 – 8</string>
+    <string name="up_to_9_12">up to 9 – 12</string>
     <string name="rating">rating</string>
     <string name="name">name</string>
     <string name="casual_game">casual game</string>

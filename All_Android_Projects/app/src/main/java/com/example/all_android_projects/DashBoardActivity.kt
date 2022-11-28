@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.RadioButton
 import androidx.appcompat.widget.AppCompatButton
+import com.example.all_android_projects.api.ui.ApiMainActivity
 import com.example.all_android_projects.calculator.CalculatorActivity
 import com.example.all_android_projects.country.ui.CountryListActivity
 import com.example.all_android_projects.lesson.LessonActivity
@@ -23,6 +24,7 @@ class DashBoardActivity : AppCompatActivity() {
     private lateinit var buttonListPage: AppCompatButton
     private lateinit var buttonMenuVariety: AppCompatButton
     private lateinit var buttonWelcomePage: AppCompatButton
+    private lateinit var buttonApi: AppCompatButton
     private lateinit var buttonStore: AppCompatButton
     private lateinit var radiobuttonyes: RadioButton
     private lateinit var radiobuttonno: RadioButton
@@ -40,6 +42,7 @@ class DashBoardActivity : AppCompatActivity() {
         buttonMenuVariety = findViewById(R.id.menu_variety)
         buttonWelcomePage = findViewById(R.id.register_page)
         buttonStore = findViewById(R.id.store)
+        buttonApi = findViewById(R.id.API)
         radiobuttonyes = findViewById(R.id.radioButtonYes)
         radiobuttonno = findViewById(R.id.radioButtonNo)
 
@@ -86,6 +89,11 @@ class DashBoardActivity : AppCompatActivity() {
 
         buttonStore.setOnClickListener {
             val intent = Intent(this, StoreActivity::class.java)
+            startActivity(intent)
+        }
+
+        buttonApi.setOnClickListener {
+            val intent = Intent(this, ApiMainActivity::class.java)
             startActivity(intent)
         }
     }
